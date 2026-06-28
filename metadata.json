@@ -1,0 +1,6 @@
+{
+  "name": "Distribuidor PEAK",
+  "description": "Sitio web oficial de un distribuidor de lubricantes, anticongelantes y fluidos automotrices PEAK, con catálogo de categorías y contacto rápido.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
