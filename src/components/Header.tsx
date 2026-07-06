@@ -51,7 +51,7 @@ export default function Header({
           onClick={() => handleNavClick("app")}
           className="flex items-center gap-3 group text-left"
         >
-          <img src="logo_peak.png" alt="" />
+          <img className="h-8 w-auto" src="logo_peak.png" alt="Logo Peak" />
           <span className="text-[10px] font-sans font-semibold tracking-[0.25em] text-neutral-400 uppercase mt-1 pl-3 border-l border-neutral-200">
             DISTRIBUIDOR
           </span>
