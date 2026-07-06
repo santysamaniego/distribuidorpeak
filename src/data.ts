@@ -6,7 +6,7 @@ export const CATEGORIES: Category[] = [
   { id: "fluido-transmision", name: "Fluido de Transmisión", iconName: "Activity" },
   { id: "aceite-moto", name: "Aceite de Moto", iconName: "Bike" },
   { id: "grasa", name: "Grasa", iconName: "Database" },
-  { id: "aceite-industrial", name: "Aceite Industrial", iconName: "Cpu" },
+  { id: "aceite-industrial", name: "Aceites Industriales", iconName: "Cpu" },
   { id: "antifriz-anticongelante", name: "Antifriz / Anticongelante", iconName: "Droplet" },
   { id: "urea", name: "Urea", iconName: "ShieldAlert" },
   { id: "auxiliares", name: "Auxiliares", iconName: "Wrench" }
@@ -103,31 +103,129 @@ export const PRODUCTS: Product[] = [
   },
   // Category: Grasa
   {
-    id: "PK-GR-501",
-    name: "PEAK Blue Tac EP-2 Grease",
+    id: "GR1138-DP400-002",
+    name: "PEAK RED HIGH TEMP GREASE EP NLGI2 (LITHIUM COMPLEX / NLGI GC-LB) (Tambor 400 LBS)",
     categoryId: "grasa",
-    description: "Grasa de complejo de litio premium, color azul, de altísima adherencia, ideal para rodamientos en condiciones de alta humedad y carga pesada.",
+    description: "Grasa de complejo de litio de extrema presión de calidad superior para altas temperaturas. Satisface los exigentes requisitos NLGI GC-LB de lubricación para rodamientos de ruedas y chasis. Excelente resistencia al lavado por agua y alta estabilidad frente a la cizalladura.",
     highlighted: true,
     specs: [
-      { label: "Grado NLGI", value: "Grado 2" },
-      { label: "Base Jabón", value: "Complejo de Litio" },
-      { label: "Color", value: "Azul Cobalto" },
-      { label: "Presentación", value: "Cartucho / Pote 1Kg" }
+      { label: "Código", value: "GR1138-DP400-002" },
+      { label: "Envase", value: "Tambor 400 LBS" },
+      { label: "Medida", value: "400 LBS" },
+      { label: "Unidades x Pallet", value: "4" }
     ],
     image: "https://images.unsplash.com/photo-1530047625168-4b29bf846e45?auto=format&fit=crop&q=80&w=400"
   },
-  // Category: Aceite industrial
   {
-    id: "PK-AI-601",
-    name: "PEAK AW Hydraulic Fluid 68",
-    categoryId: "aceite-industrial",
-    description: "Aceite hidráulico mineral con aditivos anti-desgaste Premium para transmisiones hidrostáticas, bombas de engranajes y paletas.",
+    id: "GR1138-DP045-002",
+    name: "PEAK RED HIGH TEMP GREASE EP NLGI2 (LITHIUM COMPLEX / NLGI GC-LB) (Balde 35 LbS)",
+    categoryId: "grasa",
+    description: "Grasa de complejo de litio de extrema presión de calidad superior para altas temperaturas. Satisface los exigentes requisitos NLGI GC-LB de lubricación para rodamientos de ruedas y chasis. Excelente resistencia al lavado por agua y alta estabilidad frente a la cizalladura.",
     highlighted: false,
     specs: [
-      { label: "Grado ISO", value: "ISO VG 68" },
-      { label: "Propiedad", value: "Anti-desgaste (AW)" },
-      { label: "Estabilidad", value: "Excelente frente al agua" },
-      { label: "Presentación", value: "Tambor 208L" }
+      { label: "Código", value: "GR1138-DP045-002" },
+      { label: "Envase", value: "Balde 35 LbS" },
+      { label: "Medida", value: "35 LbS" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1530047625168-4b29bf846e45?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "GR1138-DP001-002",
+    name: "PEAK RED HIGH TEMP GREASE EP NLGI2 (LITHIUM COMPLEX / NLGI GC-LB) (Caja 12/1 LbS)",
+    categoryId: "grasa",
+    description: "Grasa de complejo de litio de extrema presión de calidad superior para altas temperaturas. Satisface los exigentes requisitos NLGI GC-LB de lubricación para rodamientos de ruedas y chasis. Excelente resistencia al lavado por agua y alta estabilidad frente a la cizalladura.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "GR1138-DP001-002" },
+      { label: "Envase", value: "Caja 12/1 LbS" },
+      { label: "Medida", value: "12 LbS" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1530047625168-4b29bf846e45?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "GR1137-DP400-002",
+    name: "PEAK MULTI PURP GREASE NLGI2 (LITHIUM) (Tambor 400 LbS)",
+    categoryId: "grasa",
+    description: "Grasa lubricante multiuso a base de jabón de litio de excelente estabilidad mecánica y resistencia a la corrosión. Formulada para la protección eficaz del chasis y puntos de engrase en camiones, maquinaria agrícola e industrial.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "GR1137-DP400-002" },
+      { label: "Envase", value: "Tambor 400 LbS" },
+      { label: "Medida", value: "400 LbS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "GR1137-DP035-002",
+    name: "PEAK MULTI PURP GREASE NLGI2 (LITHIUM) (Balde 35 LbS)",
+    categoryId: "grasa",
+    description: "Grasa lubricante multiuso a base de jabón de litio de excelente estabilidad mecánica y resistencia a la corrosión. Formulada para la protección eficaz del chasis y puntos de engrase en camiones, maquinaria agrícola e industrial.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "GR1137-DP035-002" },
+      { label: "Envase", value: "Balde 35 LbS" },
+      { label: "Medida", value: "35 LbS" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=400"
+  },
+  // Category: Aceites industriales
+  {
+    id: "HD0190-TM205-003",
+    name: "Peak Hydraulic Oil MVI ISO 46 - Local (Tambor 205 LTS)",
+    categoryId: "aceite-industrial",
+    description: "Lubricante hidráulico de viscosidad media (ISO 46), formulado para sistemas industriales de alta presión con sobresaliente estabilidad térmica y control de fricción.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "HD0190-TM205-003" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Gal/Lt", value: "205" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "HD0190-DP020-003",
+    name: "Peak Hydraulic Oil MVI ISO 46 - Local (Balde 20 LTS)",
+    categoryId: "aceite-industrial",
+    description: "Lubricante hidráulico de viscosidad media (ISO 46), formulado para sistemas industriales de alta presión con sobresaliente estabilidad térmica y control de fricción.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "HD0190-DP020-003" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Gal/Lt", value: "20" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "HD0154-TM205-005",
+    name: "Peak Hydraulic Oil MVI ISO 68 - Local (Tambor 205 LTS)",
+    categoryId: "aceite-industrial",
+    description: "Lubricante hidráulico de alta viscosidad (ISO 68), diseñado para operaciones severas con máxima protección antidesgaste y durabilidad extendida.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "HD0154-TM205-005" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Gal/Lt", value: "205" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "HD0154-DP020-004",
+    name: "Peak Hydraulic Oil MVI ISO 68 - Local (Balde 20 LTS)",
+    categoryId: "aceite-industrial",
+    description: "Lubricante hidráulico de alta viscosidad (ISO 68), diseñado para operaciones severas con máxima protección antidesgaste y durabilidad extendida.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "HD0154-DP020-004" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Gal/Lt", value: "20" },
+      { label: "Unidades x Pallet", value: "20" }
     ],
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
   },

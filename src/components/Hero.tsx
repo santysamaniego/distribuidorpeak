@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MessageCircle, Instagram, ArrowRight } from "lucide-react";
+import { MessageCircle, Instagram, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const handleWhatsAppContact = () => {
@@ -20,55 +20,43 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[80vh] lg:min-h-[85vh] bg-white text-neutral-900 flex items-center justify-center overflow-hidden py-24 border-b border-neutral-100">
+    <section className="relative min-h-[90vh] lg:min-h-[95vh] bg-neutral-950 text-white flex flex-col items-center justify-center overflow-hidden py-24 border-b border-neutral-900">
       
-      {/* Background Hero Banner Image with premium light overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Hero Banner Image with premium dark overlay and vignetting */}
+      <div className="absolute inset-0 z-0 bg-neutral-950">
         <img
           src="/src/assets/images/peak_hero_banner_1782661433550.jpg"
           alt="PEAK Automotive Lubricants Banner"
           referrerPolicy="no-referrer"
-          className="object-cover w-full h-full opacity-[0.08] scale-105"
+          className="object-cover w-full h-full opacity-45 scale-100 filter brightness-[0.7] contrast-[1.05]"
         />
-        {/* Crisp light gradient mask */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white" />
+        {/* Soft, rich dark gradient shadows for absolute legibility */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,10,10,0.1)_0%,rgba(10,10,10,0.85)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/40 via-neutral-950/70 to-neutral-950" />
       </div>
 
       {/* Hero Content Container */}
-      <div className="max-w-5xl mx-auto px-6 relative z-10 w-full flex flex-col justify-center items-center text-center">
+      <div className="max-w-5xl mx-auto px-6 relative z-10 w-full flex flex-col justify-center items-center text-center mt-8">
         
-        {/* Premium badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4.5 py-1.5 bg-blue-50/50 border border-blue-100 rounded-full mb-8"
-        >
-          <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse" />
-          <span className="text-[10px] sm:text-xs font-sans tracking-[0.2em] text-blue-800 uppercase font-bold">
-            Distribuidor Mayorista • Portfolio Profesional
-          </span>
-        </motion.div>
-
-        {/* Title: Serif luxury font */}
+        {/* Title: Serif luxury font with independent light sheen animation */}
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-6xl lg:text-7.5xl font-serif tracking-tight leading-[1.08] mb-6 max-w-4xl text-neutral-900 font-medium"
+          className="text-4xl sm:text-6xl lg:text-7.5xl font-serif tracking-tight leading-[1.08] mb-6 max-w-4xl font-medium"
         >
-          Lubricación de alto rendimiento <br />
-          <span className="text-blue-600 italic font-normal font-serif">PEAK® Premium</span>
+          <span className="text-shine inline-block py-1">Lubricación de alto rendimiento</span> <br />
+          <span className="text-shine-blue italic font-normal font-serif inline-block py-1">PEAK® Premium</span>
         </motion.h1>
 
-        {/* Short, precise description */}
+        {/* Short, precise description - Now mentioning "Distribuidor Mayorista" and "Portfolio Profesional" natively */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-neutral-500 text-sm sm:text-base lg:text-lg max-w-2xl mb-12 leading-relaxed font-sans"
+          className="text-neutral-300 text-sm sm:text-base lg:text-lg max-w-3xl mb-12 leading-relaxed font-sans"
         >
-          Catálogo comercial de lubricantes, fluidos y anticongelantes bajo estándares mundiales de equipo original. Abastecimiento profesional enfocado en rendimiento y durabilidad.
+          Como <strong className="text-white">Distribuidor Mayorista</strong> oficial de PEAK®, presentamos un <strong className="text-white">Portfolio Profesional</strong> de lubricantes, grasas y refrigerantes bajo rigurosos estándares globales de equipo original. Abastecimiento inmediato con entrega bonificada y asesoramiento técnico integral en Zona Sur.
         </motion.p>
 
         {/* CTAs */}
@@ -76,59 +64,70 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center"
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center mb-16"
         >
           {/* Main WhatsApp Contact */}
           <button
             onClick={handleWhatsAppContact}
-            className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-xs tracking-widest uppercase rounded-full transition-all duration-300 shadow-lg shadow-blue-600/15 flex items-center justify-center gap-2.5"
+            className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-xs tracking-widest uppercase rounded-full transition-all duration-300 shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2.5 hover:scale-[1.02]"
           >
             Contactar por WhatsApp <MessageCircle className="w-4 h-4" />
           </button>
 
-          {/* Instagram Link */}
+          {/* Instagram Link - Styled beautifully for dark bg */}
           <button
             onClick={handleInstagramContact}
-            className="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-neutral-50 text-neutral-700 border border-neutral-200 hover:border-neutral-300 font-sans font-bold text-xs tracking-widest uppercase rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 shadow-sm"
+            className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-white/30 font-sans font-bold text-xs tracking-widest uppercase rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 shadow-sm"
           >
-            Instagram Oficial <Instagram className="w-4 h-4 text-neutral-500" />
-          </button>
-
-          {/* Direct Catalog Scroll */}
-          <button
-            onClick={scrollToCatalog}
-            className="px-6 py-3 text-xs font-sans font-semibold uppercase tracking-widest text-neutral-500 hover:text-blue-600 flex items-center justify-center gap-1.5 transition-all duration-300"
-          >
-            Catálogo completo <ArrowRight className="w-4 h-4" />
+            Instagram Oficial <Instagram className="w-4 h-4 text-neutral-300" />
           </button>
         </motion.div>
 
-        {/* Bottom micro trust metrics */}
+        {/* Bottom micro trust metrics with sleek white borders */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="grid grid-cols-3 gap-6 sm:gap-16 mt-20 border-t border-neutral-100 pt-10 w-full max-w-3xl justify-items-center"
+          className="grid grid-cols-3 gap-6 sm:gap-16 border-t border-white/10 pt-10 w-full max-w-3xl justify-items-center mb-10"
         >
           <div className="text-center">
-            <span className="text-2xl sm:text-3xl font-serif text-blue-600 font-semibold block">100%</span>
+            <span className="text-2xl sm:text-3xl font-serif text-blue-400 font-semibold block">100%</span>
             <span className="text-[9px] font-sans text-neutral-400 uppercase tracking-widest font-bold">Garantizado</span>
           </div>
           <div className="text-center">
-            <span className="text-2xl sm:text-3xl font-serif text-blue-600 font-semibold block">Zona Sur</span>
+            <span className="text-2xl sm:text-3xl font-serif text-blue-400 font-semibold block">Zona Sur</span>
             <span className="text-[9px] font-sans text-neutral-400 uppercase tracking-widest font-bold">Distribución</span>
           </div>
           <div className="text-center">
-            <span className="text-2xl sm:text-3xl font-serif text-blue-600 font-semibold block">Original</span>
+            <span className="text-2xl sm:text-3xl font-serif text-blue-400 font-semibold block">Original</span>
             <span className="text-[9px] font-sans text-neutral-400 uppercase tracking-widest font-bold">Línea Oficial</span>
+          </div>
+        </motion.div>
+
+        {/* Scroll indicator with bouncing arrow and shiny sweep effect */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col items-center gap-2.5 cursor-pointer mt-4"
+          onClick={scrollToCatalog}
+        >
+          <span className="text-[9px] font-sans tracking-[0.25em] text-neutral-400 uppercase font-extrabold">
+            Explorar Catálogo
+          </span>
+          <div className="relative w-10 h-10 rounded-full border border-white/20 hover:border-white/40 flex items-center justify-center bg-white/5 backdrop-blur-sm arrow-bounce overflow-hidden group">
+            {/* Reflecting light beam sweep */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full arrow-shine-sweep pointer-events-none" />
+            <ChevronDown className="w-5 h-5 text-white/80 group-hover:text-white" />
           </div>
         </motion.div>
 
       </div>
 
-      {/* Bottom overlay fine shadow to match our high-end light design */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-neutral-50 to-transparent pointer-events-none" />
+      {/* Bottom overlay fine shadow */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-neutral-950 to-transparent pointer-events-none" />
     </section>
   );
 }
+
 

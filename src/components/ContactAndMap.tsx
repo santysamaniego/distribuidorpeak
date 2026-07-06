@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { COVERAGE_ZONES } from "../data";
-import { Send, MapPin, CheckCircle, Navigation, Info } from "lucide-react";
-
-const MAP_SOURCES: Record<string, string> = {
-  "Avellaneda": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3323081514787!2d-58.372553!3d-34.66258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3334fd912ec9b%3A0xc331a98075f72365!2sAvellaneda%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar",
-  "Lanús": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.252062562575!2d-58.4116527!3d-34.6987154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc330df32cf5f%3A0x7d6f582736cb4e5a!2sLan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1719600000000!5m2!1ses-419!2sar",
-  "Lomas de Zamora": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.252062562575!2d-58.415!3d-34.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc36e05ff6477%3A0xc3afbfd8e4eb7216!2sLomas%20de%20Zamora%252C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar",
-  "Adrogué": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.456012!2d-58.39!3d-34.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd306782db841%3A0x1dcd7961d564fa7c!2sAdrogu%C3%A9%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar",
-  "Quilmes": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.456012!2d-58.25!3d-34.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e2646d2cb79%3A0xb367e946cb3ee1b0!2sQuilmes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar",
-  "Ezeiza": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.456012!2d-58.52!3d-34.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd131843b44b7%3A0x51c6c5b057fc8661!2sEzeiza%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar"
-};
+import { Send, MapPin, CheckCircle, Info } from "lucide-react";
 
 export default function ContactAndMap() {
   const [form, setForm] = useState({
@@ -20,7 +10,6 @@ export default function ContactAndMap() {
     message: "",
   });
   
-  const [selectedZone, setSelectedZone] = useState<string>("Lomas de Zamora");
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -169,7 +158,7 @@ export default function ContactAndMap() {
           </div>
 
           {/* Right Side: Elegant Minimal Map Guide with actual Google Map */}
-          <div className="lg:col-span-7 bg-slate-50 border border-neutral-150 p-8 rounded-3xl flex flex-col justify-between h-full min-h-[500px] shadow-sm">
+          <div className="lg:col-span-7 bg-slate-50 border border-neutral-150 p-8 rounded-3xl flex flex-col justify-between h-full shadow-sm">
             <div className="flex flex-col h-full justify-between gap-6">
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -182,14 +171,14 @@ export default function ContactAndMap() {
                   </span>
                 </div>
                 <p className="text-neutral-500 text-xs leading-relaxed mb-6 font-sans">
-                  Nuestra red de logística atiende periódicamente a comercios minoristas y mayoristas en toda la Zona Sur. Seleccione su localidad para visualizar el mapa de la zona y conocer la frecuencia de visitas semanal con envío gratuito.
+                  Nuestra red de logística y distribución atiende de manera regular a comercios minoristas, lubricentros y talleres mecánicos en toda la Zona Sur con envíos programados gratuitos y atención personalizada.
                 </p>
 
                 {/* Google Map Frame with elegant rounding and shadows */}
-                <div className="relative w-full bg-white border border-neutral-200 rounded-2xl p-1.5 mb-6 overflow-hidden h-72 shadow-inner">
+                <div className="relative w-full bg-white border border-neutral-200 rounded-2xl p-1.5 overflow-hidden h-[340px] shadow-inner">
                   <iframe
                     title="Ubicación de Distribución"
-                    src={MAP_SOURCES[selectedZone] || MAP_SOURCES["Lomas de Zamora"]}
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.252062562575!2d-58.415!3d-34.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc36e05ff6477%3A0xc3afbfd8e4eb7216!2sLomas%20de%20Zamora%252C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1719600000000!5m2!1ses!2sar"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -198,53 +187,6 @@ export default function ContactAndMap() {
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-xl w-full h-full"
                   />
-                </div>
-              </div>
-
-              {/* Dynamic Localities Selector - Rounded and beautiful */}
-              <div>
-                <span className="block text-[10px] font-sans tracking-widest uppercase text-neutral-400 mb-3 font-bold">
-                  LOCALIDADES CON COBERTURA DE ENTREGA DIRECTA
-                </span>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {COVERAGE_ZONES.map((zone) => {
-                    const isActive = selectedZone === zone.name;
-                    return (
-                      <button
-                        key={zone.name}
-                        onClick={() => setSelectedZone(zone.name)}
-                        className={`px-4 py-2 text-[11px] font-sans font-semibold tracking-wider uppercase transition-all duration-300 rounded-full border ${
-                          isActive
-                            ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/10"
-                            : "bg-white text-neutral-600 hover:text-neutral-900 border-neutral-200 hover:border-neutral-300"
-                        }`}
-                      >
-                        {zone.name}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Selected Zone Detail Panel */}
-                <div className="bg-white p-5 border border-neutral-150 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
-                  <div>
-                    <span className="text-[9px] font-sans text-neutral-400 uppercase tracking-widest block mb-1 font-bold">
-                      LOCALIDAD DE RECORRIDO
-                    </span>
-                    <h4 className="text-base font-serif text-neutral-800 flex items-center gap-2 font-medium">
-                      <Navigation className="w-4 h-4 text-blue-600 rotate-45" />
-                      {selectedZone}
-                    </h4>
-                  </div>
-                  
-                  <div className="bg-blue-50/50 px-4 py-2.5 border border-blue-100 rounded-xl w-full sm:w-auto text-center sm:text-right">
-                    <span className="text-[8px] font-sans text-blue-500 uppercase tracking-widest block mb-0.5 font-bold">
-                      Logística Frecuente
-                    </span>
-                    <span className="text-xs font-sans text-blue-600 font-extrabold tracking-wider uppercase">
-                      {COVERAGE_ZONES.find(z => z.name === selectedZone)?.status || "Entrega Frecuente"}
-                    </span>
-                  </div>
                 </div>
               </div>
 

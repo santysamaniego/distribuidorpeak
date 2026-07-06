@@ -8,6 +8,15 @@ export interface Product {
   image: string;
 }
 
+export interface GroupedProduct {
+  baseName: string;
+  categoryId: string;
+  description: string;
+  highlighted: boolean;
+  image: string;
+  varieties: Product[];
+}
+
 export interface Category {
   id: string;
   name: string;
