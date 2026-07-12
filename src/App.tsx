@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Ticker from "./components/Ticker";
+import AssociatedBrands from "./components/AssociatedBrands";
 import AboutUs from "./components/AboutUs";
 import FeaturedProducts from "./components/FeaturedProducts";
 import ProductsSection from "./components/ProductsSection";
@@ -30,6 +31,9 @@ export default function App() {
 
       {/* 3. Marketing Information Ticker */}
       <Ticker />
+
+      {/* Associated Brands Section */}
+      <AssociatedBrands />
 
       {/* 4. About Us (First content section: slides from Left & Right to Center, resets on scroll) */}
       <AboutUs />

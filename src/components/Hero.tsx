@@ -3,13 +3,13 @@ import { MessageCircle, Instagram, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const handleWhatsAppContact = () => {
-    const phoneNumber = "5491134567890"; // Reemplazar por número del distribuidor
+    const phoneNumber = "5491172528552"; // Reemplazar por número del distribuidor
     const message = "¡Hola! Quisiera ponerme en contacto con el distribuidor oficial de PEAK para realizar una consulta comercial sobre lubricantes y fluidos.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   const handleInstagramContact = () => {
-    window.open("https://instagram.com/peak_argentina_fake_url", "_blank"); // Reemplazar por Instagram del distribuidor
+    window.open("https://instagram.com/rpdistribuidora1_", "_blank"); // Reemplazar por Instagram del distribuidor
   };
 
   const scrollToCatalog = () => {
@@ -25,7 +25,7 @@ export default function Hero() {
       {/* Background Hero Banner Image with premium dark overlay and vignetting */}
       <div className="absolute inset-0 z-0 bg-neutral-950">
         <img
-          src="/src/assets/images/peak_hero_banner_1782661433550.jpg"
+          src="/fondo_hero.png"
           alt="PEAK Automotive Lubricants Banner"
           referrerPolicy="no-referrer"
           className="object-cover w-full h-full opacity-45 scale-100 filter brightness-[0.7] contrast-[1.05]"

@@ -231,16 +231,492 @@ export const PRODUCTS: Product[] = [
   },
   // Category: Antifriz / Anticongelante
   {
-    id: "PK-AA-701",
-    name: "PEAK Global Life Lifetime 50/50",
+    id: "AF0434-TM205-000",
+    name: "PEAK FINAL CHARGE GLOBAL CONCENTRADO (Heavy Duty Fully Formulated SPA Precharged) (Tambor 205 LTS)",
     categoryId: "antifriz-anticongelante",
-    description: "Anticongelante y refrigerante de por vida, formulado con tecnología de ácidos orgánicos (OAT) compatible con todos los vehículos del mercado.",
+    description: "Anticongelante y refrigerante de servicio pesado con formulación completa precomprimida (SPA). Brinda protección insuperable para sistemas de enfriamiento industriales y comerciales.",
     highlighted: true,
     specs: [
-      { label: "Fórmula", value: "Listo para usar 50/50" },
-      { label: "Tecnología", value: "OAT (Vida Extendida)" },
-      { label: "Compatibilidad", value: "Universal" },
-      { label: "Presentación", value: "1 Galón (3.78L)" }
+      { label: "Código", value: "AF0434-TM205-000" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0434-DP020-001",
+    name: "PEAK FINAL CHARGE GLOBAL CONCENTRADO (Heavy Duty Fully Formulated SPA Precharged) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de servicio pesado con formulación completa precomprimida (SPA). Brinda protección insuperable para sistemas de enfriamiento industriales y comerciales.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0434-DP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0435-TM205-002",
+    name: "PEAK FINAL CHARGE GLOBAL DILUIDO 50% (Heavy Duty Fully Formulated SCA Precharged) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido listo para usar al 50%. Formulación completa SCA precomprimida para servicio pesado, previene la cavitación y herrumbre en camiones y equipos industriales.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0435-TM205-002" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0435-DP020-001",
+    name: "PEAK FINAL CHARGE GLOBAL DILUIDO 50% (Heavy Duty Fully Formulated SCA Precharged) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido listo para usar al 50%. Formulación completa SCA precomprimida para servicio pesado, previene la cavitación y herrumbre en camiones y equipos industriales.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0435-DP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0712-TM205-001",
+    name: "PEAK FINAL CHARGE NOAT CONCENTRADO (Hybrid Technology) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de tecnología híbrida orgánica (NOAT). Fórmula de vida útil extendida libre de fosfatos y silicatos para alta resistencia térmica.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0712-TM205-001" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0712-DP020-001",
+    name: "PEAK FINAL CHARGE NOAT CONCENTRADO (Hybrid Technology) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de tecnología híbrida orgánica (NOAT). Fórmula de vida útil extendida libre de fosfatos y silicatos para alta resistencia térmica.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0712-DP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0713-CB000-002",
+    name: "PEAK FINAL CHARGED NOAT DILUIDO 50% (Hybrid Technology) (IBC 1000 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 50% con tecnología híbrida (NOAT). Ofrece protección superior contra la corrosión y cavitación para motores de servicio pesado.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0713-CB000-002" },
+      { label: "Envase", value: "IBC 1000 LTS" },
+      { label: "Medida", value: "1000 LTS" },
+      { label: "Unidades x Pallet", value: "1" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0713-TM205-004",
+    name: "PEAK FINAL CHARGED NOAT DILUIDO 50% (Hybrid Technology) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 50% con tecnología híbrida (NOAT). Ofrece protección superior contra la corrosión y cavitación para motores de servicio pesado.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0713-TM205-004" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF013-DP020-001",
+    name: "PEAK FINAL CHARGED NOAT DILUIDO 50% (Hybrid Technology) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 50% con tecnología híbrida (NOAT). Ofrece protección superior contra la corrosión y cavitación para motores de servicio pesado.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF013-DP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0714-CB000-002",
+    name: "PEAK FINAL CHARGED NOAT DILUIDO 30% (Hybrid Technology) (IBC 1000 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 30% con tecnología híbrida (NOAT). Ideal para zonas de clima templado que requieren óptimo balance de transferencia térmica.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0714-CB000-002" },
+      { label: "Envase", value: "IBC 1000 LTS" },
+      { label: "Medida", value: "1000 LTS" },
+      { label: "Unidades x Pallet", value: "1" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0580-TM205-000",
+    name: "PEAK FLEET CHARGE CONCENTRADO (Heavy Duty Fully Formulated SCA Precharged) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante convencional de servicio pesado completamente formulado con aditivos químicos suplementarios (SCA). Protección robusta para flotas comerciales.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0580-TM205-000" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0580-DP020-000",
+    name: "PEAK FLEET CHARGE CONCENTRADO (Heavy Duty Fully Formulated SCA Precharged) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante convencional de servicio pesado completamente formulado con aditivos químicos suplementarios (SCA). Protección robusta para flotas comerciales.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0580-DP020-000" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0581-CB000-000",
+    name: "PEAK FLEET CHARGE DILUIDO 50% (Heavy Duty Fully Formulated SCA Precharged) (IBC 1000 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante premezclado al 50% listo para usar. Formulación SCA completa para flotas de servicio pesado, minimizando costos de mantenimiento por cavitación.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0581-CB000-000" },
+      { label: "Envase", value: "IBC 1000 LTS" },
+      { label: "Medida", value: "1000 LTS" },
+      { label: "Unidades x Pallet", value: "1" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0581-TM205-000",
+    name: "PEAK FLEET CHARGE DILUIDO 50% (Heavy Duty Fully Formulated SCA Precharged) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante premezclado al 50% listo para usar. Formulación SCA completa para flotas de servicio pesado, minimizando costos de mantenimiento por cavitación.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0581-TM205-000" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0581-DP020-001",
+    name: "PEAK FLEET CHARGE DILUIDO 50% (Heavy Duty Fully Formulated SCA Precharged) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante premezclado al 50% listo para usar. Formulación SCA completa para flotas de servicio pesado, minimizando costos de mantenimiento por cavitación.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0581-DP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0275-CB111-001",
+    name: "PEAK LONG LIFE CONCENTRADO ROJO (Automotive OAT) (IBC 1000 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de vida extendida de color rojo formulado con tecnología de ácidos orgánicos (Automotive OAT) para vehículos de pasajeros y comerciales ligeros.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0275-CB111-001" },
+      { label: "Envase", value: "IBC 1000 LTS" },
+      { label: "Medida", value: "1000 LTS" },
+      { label: "Unidades x Pallet", value: "1" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0275-TM205-000",
+    name: "PEAK LONG LIFE CONCENTRADO ROJO (Automotive OAT) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de vida extendida de color rojo formulado con tecnología de ácidos orgánicos (Automotive OAT) para vehículos de pasajeros y comerciales ligeros.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0275-TM205-000" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0275-JN006-000",
+    name: "PEAK LONG LIFE CONCENTRADO ROJO (Automotive OAT) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de vida extendida de color rojo formulado con tecnología de ácidos orgánicos (Automotive OAT) para vehículos de pasajeros y comerciales ligeros.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0275-JN006-000" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0275-JN012-010",
+    name: "PEAK LONG LIFE CONCENTRADO ROJO (Automotive OAT) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante de vida extendida de color rojo formulado con tecnología de ácidos orgánicos (Automotive OAT) para vehículos de pasajeros y comerciales ligeros.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0275-JN012-010" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0588-JN006-001",
+    name: "PEAK LONG LIFE DILUIDO 50% ROJO (Automotive OAT) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 50% de por vida, color rojo. Tecnología OAT avanzada compatible con aluminio y todas las aleaciones metálicas del motor.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0588-JN006-001" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0588-JN012-005",
+    name: "PEAK LONG LIFE DILUIDO 50% ROJO (Automotive OAT) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante diluido al 50% de por vida, color rojo. Tecnología OAT avanzada compatible con aluminio y todas las aleaciones metálicas del motor.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0588-JN012-005" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0721-TM200-001",
+    name: "PEAK LONG LIFE CONCENTRADO AMARILLO (Automotive OAT) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante de vida extendida de color amarillo formulado con tecnología de ácidos orgánicos (Automotive OAT). Cobertura universal de última generación.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0721-TM200-001" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0721-JN006-001",
+    name: "PEAK LONG LIFE CONCENTRADO AMARILLO (Automotive OAT) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante de vida extendida de color amarillo formulado con tecnología de ácidos orgánicos (Automotive OAT). Cobertura universal de última generación.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0721-JN006-001" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0721-JN012-003",
+    name: "PEAK LONG LIFE CONCENTRADO AMARILLO (Automotive OAT) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante de vida extendida de color amarillo formulado con tecnología de ácidos orgánicos (Automotive OAT). Cobertura universal de última generación.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0721-JN012-003" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0748-JN006-001",
+    name: "PEAK LONG LIFE DILUIDO 50% AMARILLO (Automotive OAT) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante premezclado de color amarillo al 50%. Ofrece compatibilidad multivehículo total y protección superior contra temperaturas extremas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0748-JN006-001" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0748-JN012-003",
+    name: "PEAK LONG LIFE DILUIDO 50% AMARILLO (Automotive OAT) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante premezclado de color amarillo al 50%. Ofrece compatibilidad multivehículo total y protección superior contra temperaturas extremas.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0748-JN012-003" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0032-CB000-000",
+    name: "PEAK CONVENTIONAL CONCENTRADO VERDE (Automotive Conventional) (IBC 1000 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante clásico de color verde. Formulación automotriz convencional de alta confiabilidad con silicatos de bajo contenido de fósforo.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0032-CB000-000" },
+      { label: "Envase", value: "IBC 1000 LTS" },
+      { label: "Medida", value: "1000 LTS" },
+      { label: "Unidades x Pallet", value: "1" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0032-TM205-009",
+    name: "PEAK CONVENTIONAL CONCENTRADO VERDE (Automotive Conventional) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante clásico de color verde. Formulación automotriz convencional de alta confiabilidad con silicatos de bajo contenido de fósforo.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0032-TM205-009" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0032-BP020-001",
+    name: "PEAK CONVENTIONAL CONCENTRADO VERDE (Automotive Conventional) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante clásico de color verde. Formulación automotriz convencional de alta confiabilidad con silicatos de bajo contenido de fósforo.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0032-BP020-001" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0032-JN006-001",
+    name: "PEAK CONVENTIONAL CONCENTRADO VERDE (Automotive Conventional) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante clásico de color verde. Formulación automotriz convencional de alta confiabilidad con silicatos de bajo contenido de fósforo.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0032-JN006-001" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0032-JN012-003",
+    name: "PEAK CONVENTIONAL CONCENTRADO VERDE (Automotive Conventional) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Anticongelante y refrigerante clásico de color verde. Formulación automotriz convencional de alta confiabilidad con silicatos de bajo contenido de fósforo.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0032-JN012-003" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0422-TM205-008",
+    name: "PEAK CONVENTIONAL DILUIDO 50% VERDE (Automotive Conventional) (Tambor 205 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante clásico diluido al 50% color verde listo para usar. Excelente protección convencional contra congelamiento y ebullición.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "AF0422-TM205-008" },
+      { label: "Envase", value: "Tambor 205 LTS" },
+      { label: "Medida", value: "205 LTS" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0422-DP020-008",
+    name: "PEAK CONVENTIONAL DILUIDO 50% VERDE (Automotive Conventional) (Balde 20 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante clásico diluido al 50% color verde listo para usar. Excelente protección convencional contra congelamiento y ebullición.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0422-DP020-008" },
+      { label: "Envase", value: "Balde 20 LTS" },
+      { label: "Medida", value: "20 LTS" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0422-JN006-001",
+    name: "PEAK CONVENTIONAL DILUIDO 50% VERDE (Automotive Conventional) (Caja 6 x 4 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante clásico diluido al 50% color verde listo para usar. Excelente protección convencional contra congelamiento y ebullición.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0422-JN006-001" },
+      { label: "Envase", value: "Caja 6 x 4 LTS" },
+      { label: "Medida", value: "24 LTS" },
+      { label: "Unidades x Pallet", value: "18" }
+    ],
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "AF0422-JN012-002",
+    name: "PEAK CONVENTIONAL DILUIDO 50% VERDE (Automotive Conventional) (Caja 12 x 1 LTS)",
+    categoryId: "antifriz-anticongelante",
+    description: "Refrigerante clásico diluido al 50% color verde listo para usar. Excelente protección convencional contra congelamiento y ebullición.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "AF0422-JN012-002" },
+      { label: "Envase", value: "Caja 12 x 1 LTS" },
+      { label: "Medida", value: "12 LTS" },
+      { label: "Unidades x Pallet", value: "52" }
     ],
     image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400"
   },
@@ -261,16 +737,170 @@ export const PRODUCTS: Product[] = [
   },
   // Category: Auxiliares
   {
-    id: "PK-AX-901",
-    name: "PEAK Brake Fluid DOT 4",
+    id: "LP0001-JN003-001",
+    name: "LAVAPARABRISAS PEAK LISTO PARA USAR (Caja 3 x 5 Ltr)",
     categoryId: "auxiliares",
-    description: "Fluido de frenos sintético de alto punto de ebullición para sistemas de frenos de disco y tambor de vehículos ligeros y pesados.",
+    description: "Líquido limpiaparabrisas listo para usar de PEAK. Remueve de forma efectiva insectos, barro, hollín y suciedad del asfalto sin dejar vetas ni marcas, garantizando la máxima visibilidad y cuidando la vida útil de las escobillas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LP0001-JN003-001" },
+      { label: "Envase", value: "Caja 3 x 5 Ltr" },
+      { label: "Gal/Lt", value: "15" },
+      { label: "Unidades x Pallet", value: "30" }
+    ],
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LP0004-JN012-007",
+    name: "LAVAPARABRISAS PEAK CONCENTRADO (Caja 12 x 1 Ltr)",
+    categoryId: "auxiliares",
+    description: "Líquido limpiaparabrisas concentrado de alto rendimiento. Su potente fórmula desengrasante remueve la suciedad más rebelde adherida al cristal, mejorando la seguridad y nitidez visual bajo cualquier condición climática.",
     highlighted: false,
     specs: [
-      { label: "Grado", value: "DOT 4" },
-      { label: "Punto Ebullición", value: "260 °C (Mínimo)" },
-      { label: "Estabilidad", value: "Excelente contra la corrosión" },
-      { label: "Presentación", value: "500 ml" }
+      { label: "Código", value: "LP0004-JN012-007" },
+      { label: "Envase", value: "Caja 12 x 1 Ltr" },
+      { label: "Gal/Lt", value: "12" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "SL0275-JN064-005",
+    name: "LAVAPARABRISAS PEAK ULTRA CONCENTRADO (Caja 64 x 50cc)",
+    categoryId: "auxiliares",
+    description: "Fórmula de última generación ultra concentrada en prácticas monodosis de 50cc. Brinda el máximo poder desengrasante y limpiador en un formato sumamente compacto, fácil de dosificar directamente en el depósito de agua.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "SL0275-JN064-005" },
+      { label: "Envase", value: "Caja 64 x 50cc" },
+      { label: "Gal/Lt", value: "3.2" },
+      { label: "Unidades x Pallet", value: "96" }
+    ],
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "SL0275-JN128-006",
+    name: "LAVAPARABRISAS PEAK ULTRA CONCENTRADO (Caja 128 x 50cc)",
+    categoryId: "auxiliares",
+    description: "Fórmula de última generación ultra concentrada en prácticas monodosis de 50cc. Brinda el máximo poder desengrasante y limpiador en un formato sumamente compacto, fácil de dosificar directamente en el depósito de agua.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "SL0275-JN128-006" },
+      { label: "Envase", value: "Caja 128 x 50cc" },
+      { label: "Gal/Lt", value: "6.4" },
+      { label: "Unidades x Pallet", value: "60" }
+    ],
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "PE0586-JN012-000",
+    name: "LIMPIA INYECTORES PEAK NAFTA (Caja 12 x 250 cc)",
+    categoryId: "auxiliares",
+    description: "Aditivo limpiador de alta concentración diseñado específicamente para motores nafteros. Elimina con eficacia los depósitos de carbón en inyectores y válvulas, restaurando la potencia original y optimizando el consumo de combustible.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "PE0586-JN012-000" },
+      { label: "Envase", value: "Caja 12 x 250 cc" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "112" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "PE0590-JN012-000",
+    name: "LIMPIA INYECTORES PEAK DIESEL (Caja 12 x 250 cc)",
+    categoryId: "auxiliares",
+    description: "Aditivo de limpieza profunda y lubricación formulado para sistemas de inyección diésel, incluyendo sistemas Common Rail de alta presión. Remueve depósitos del inyector y la bomba de combustible, reduciendo emisiones nocivas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "PE0590-JN012-000" },
+      { label: "Envase", value: "Caja 12 x 250 cc" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "112" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "ZA0160-JN003-001",
+    name: "PEAK AGUA DESMINERALIZADA (Caja 3 x 5 Lts)",
+    categoryId: "auxiliares",
+    description: "Agua desmineralizada de alta pureza obtenida mediante un riguroso proceso de ósmosis y filtración. Perfecta para rellenar radiadores, acumuladores de baterías y otros sistemas industriales, evitando la formación de sarro y herrumbre.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "ZA0160-JN003-001" },
+      { label: "Envase", value: "Caja 3 x 5 Lts" },
+      { label: "Gal/Lt", value: "15" },
+      { label: "Unidades x Pallet", value: "42" }
+    ],
+    image: "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "ZA0160-JN012-000",
+    name: "PEAK AGUA DESMINERALIZADA (Caja 12 x 1 Lts)",
+    categoryId: "auxiliares",
+    description: "Agua desmineralizada de alta pureza obtenida mediante un riguroso proceso de ósmosis y filtración. Perfecta para rellenar radiadores, acumuladores de baterías y otros sistemas industriales, evitando la formación de sarro y herrumbre.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "ZA0160-JN012-000" },
+      { label: "Envase", value: "Caja 12 x 1 Lts" },
+      { label: "Gal/Lt", value: "12" },
+      { label: "Unidades x Pallet", value: "44" }
+    ],
+    image: "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LF0015-JN006-002",
+    name: "LIQUIDO PARA FRENO PEAK TIPO 4 - DOT 4 (Caja 6 x 254 cc)",
+    categoryId: "auxiliares",
+    description: "Fluido de frenos sintético de alta resistencia térmica que supera con creces las exigencias DOT 4. Asegura una excelente respuesta de frenado bajo condiciones extremas y una óptima protección de los sellos hidráulicos.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LF0015-JN006-002" },
+      { label: "Envase", value: "Caja 6 x 254 cc" },
+      { label: "Gal/Lt", value: "2" },
+      { label: "Unidades x Pallet", value: "148" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LF0051-JN006-002",
+    name: "LIQUIDO PARA FRENO PEAK TIPO 3 - DOT 3 (Caja 6 x 254 cc)",
+    categoryId: "auxiliares",
+    description: "Fluido de frenos de base sintética de alta calidad para sistemas hidráulicos DOT 3. Ofrece gran estabilidad física y química a elevadas temperaturas, previniendo eficazmente la corrosión en las tuberías y cilindros metálicos.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LF0051-JN006-002" },
+      { label: "Envase", value: "Caja 6 x 254 cc" },
+      { label: "Gal/Lt", value: "2" },
+      { label: "Unidades x Pallet", value: "148" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LF0015-JN012-010",
+    name: "LIQUIDO PARA FRENO PEAK TIPO 4 - DOT 4 (Caja 12 x 1 Ltr)",
+    categoryId: "auxiliares",
+    description: "Fluido de frenos sintético de alta resistencia térmica que supera con creces las exigencias DOT 4. Asegura una excelente respuesta de frenado bajo condiciones extremas y una óptima protección de los sellos hidráulicos.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LF0015-JN012-010" },
+      { label: "Envase", value: "Caja 12 x 1 Ltr" },
+      { label: "Gal/Lt", value: "12" },
+      { label: "Unidades x Pallet", value: "52" }
+    ],
+    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LF0051-JN012-010",
+    name: "LIQUIDO PARA FRENO PEAK TIPO 3 - DOT 3 (Caja 12 x 1 Ltr)",
+    categoryId: "auxiliares",
+    description: "Fluido de frenos de base sintética de alta calidad para sistemas hidráulicos DOT 3. Ofrece gran estabilidad física y química a elevadas temperaturas, previniendo eficazmente la corrosión en las tuberías y cilindros metálicos.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LF0051-JN012-010" },
+      { label: "Envase", value: "Caja 12 x 1 Ltr" },
+      { label: "Gal/Lt", value: "12" },
+      { label: "Unidades x Pallet", value: "52" }
     ],
     image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=400"
   }

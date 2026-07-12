@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Send, MapPin, CheckCircle, Info } from "lucide-react";
+import { Send, MapPin, CheckCircle, Info, Instagram, Phone } from "lucide-react";
 
 export default function ContactAndMap() {
   const [form, setForm] = useState({
@@ -26,7 +26,7 @@ export default function ContactAndMap() {
       return;
     }
 
-    const targetPhone = "5491134567890"; // Número oficial de contacto PEAK
+    const targetPhone = "5491172528552"; // Número oficial de contacto PEAK
     const formattedText = `Hola! Quiero realizar una consulta.\n\n*Datos de contacto:*\n- Nombre: ${form.name}\n- Apellido: ${form.lastName}\n- Teléfono: ${form.phone}\n\n*Consulta:*\n${form.message}\n\n_Enviado desde el sitio web de Distribución PEAK_`;
     
     const encodedText = encodeURIComponent(formattedText);
@@ -110,7 +110,7 @@ export default function ContactAndMap() {
                     value={form.phone}
                     onChange={handleChange}
                     required
-                    placeholder="Ej. +54 9 11 3456 7890"
+                    placeholder="Ej. +54 9 11 7252 8552"
                     className="w-full bg-white border border-neutral-200 focus:border-blue-500 rounded-xl py-3 px-4 text-xs font-sans text-neutral-800 outline-none transition-all placeholder-neutral-300 focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
@@ -167,12 +167,39 @@ export default function ContactAndMap() {
                     Zona de cobertura logística
                   </h3>
                   <span className="text-[9px] font-sans text-blue-600 px-3 py-1 bg-white border border-neutral-200 uppercase font-bold tracking-wider rounded-full">
-                    Buenos Aires Sur
+                    Zona Sur
                   </span>
                 </div>
-                <p className="text-neutral-500 text-xs leading-relaxed mb-6 font-sans">
-                  Nuestra red de logística y distribución atiende de manera regular a comercios minoristas, lubricentros y talleres mecánicos en toda la Zona Sur con envíos programados gratuitos y atención personalizada.
+                <p className="text-neutral-500 text-xs leading-relaxed mb-4 font-sans">
+                  Nuestra red de logística y distribución atiende de manera regular principalmente a comercios minoristas, lubricentros y talleres mecánicos en la <strong>Zona Sur</strong> por el momento. Sin embargo, nos extendemos a varias otras zonas bajo consulta; por favor no dudes en consultarnos para coordinar tu entrega.
                 </p>
+
+                {/* Social media follow row */}
+                <div className="flex flex-wrap items-center gap-4 mb-6 bg-slate-100/80 border border-neutral-200 px-4 py-3 rounded-2xl">
+                  <div className="flex items-center gap-1.5 text-[10px] font-sans font-bold text-neutral-500 tracking-wider uppercase">
+                    <span>¡Seguinos en redes!</span>
+                  </div>
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://instagram.com/rpdistribuidora1_" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-1 text-xs font-sans font-semibold text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                      <Instagram className="w-4 h-4 text-pink-600" />
+                      <span>@rpdistribuidora1_</span>
+                    </a>
+                    <a 
+                      href="https://wa.me/5491172528552" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-1 text-xs font-sans font-semibold text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-green-600" />
+                      <span>11 7252 8552</span>
+                    </a>
+                  </div>
+                </div>
 
                 {/* Google Map Frame with elegant rounding and shadows */}
                 <div className="relative w-full bg-white border border-neutral-200 rounded-2xl p-1.5 overflow-hidden h-[340px] shadow-inner">

@@ -1,4 +1,4 @@
-import { Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp, Instagram, Phone } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -90,6 +90,18 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span>contacto@distribuidorpeak.com</span>
               </li>
+              <li className="flex items-center gap-2.5 font-semibold text-neutral-700">
+                <Instagram className="w-4 h-4 text-pink-600 flex-shrink-0" />
+                <a href="https://instagram.com/rpdistribuidora1_" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 transition-colors">
+                  @rpdistribuidora1_
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5 font-semibold text-neutral-700">
+                <Phone className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <a href="https://wa.me/5491172528552" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">
+                  11 7252 8552
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -101,7 +113,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-sans tracking-wider text-neutral-400 uppercase font-bold">
           <div>
-            &copy; {new Date().getFullYear()} Distribuidor Especializado PEAK® • Buenos Aires Sur.
+            &copy; {new Date().getFullYear()} Distribuidor Especializado PEAK® • Zona Sur.
           </div>
           
           <button

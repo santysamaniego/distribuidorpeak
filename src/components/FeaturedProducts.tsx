@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
   }, []);
 
   const handleProductConsultation = (product: Product) => {
-    const phoneNumber = "5491134567890"; // Reemplazar por número del distribuidor
+    const phoneNumber = "5491172528552"; // Reemplazar por número del distribuidor
     const message = `Hola! Vi en la sección de Destacados de la web el producto:\n\n*Producto:* ${product.name}\n*ID:* ${product.id}\n*Categoría:* ${CATEGORIES.find(c => c.id === product.categoryId)?.name || 'General'}\n\nMe interesaría conocer precio, stock y plazos de entrega en Zona Sur. ¡Gracias!`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");

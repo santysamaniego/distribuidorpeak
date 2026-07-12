@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppFloat() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5491134567890"; // Reemplazar por número del distribuidor
+    const phoneNumber = "5491172528552"; // Reemplazar por número del distribuidor
     const message = "Hola! Vi su sitio web y quería realizar una consulta general sobre lubricantes y fluidos PEAK.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };

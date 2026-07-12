@@ -28,10 +28,10 @@ export default function ProductsSection({
     "fluido-transmision": "https://images.unsplash.com/photo-1518384401463-d387de163ece?auto=format&fit=crop&q=80&w=600",
     "aceite-moto": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=600",
     "grasa": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600",
-    "aceite-industrial": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=600",
-    "antifriz-anticongelante": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&q=80&w=600",
+    "aceite-industrial": "/logo_industriales.png",
+    "antifriz-anticongelante": "/logo_antifreeze.png",
     "urea": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=600",
-    "auxiliares": "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=600"
+    "auxiliares": "/logo_auxiliares.png"
   };
 
   const getCategoryIcon = (iconName: string) => {
@@ -109,7 +109,7 @@ export default function ProductsSection({
   }, []);
 
   const handleProductConsultation = (product: Product) => {
-    const phoneNumber = "5491134567890"; // Reemplazar por número del distribuidor
+    const phoneNumber = "5491172528552"; // Reemplazar por número del distribuidor
     const message = `Hola! Estoy interesado en el producto del catálogo PEAK:\n\n*Producto:* ${product.name}\n*ID:* ${product.id}\n*Categoría:* ${CATEGORIES.find(c => c.id === product.categoryId)?.name || 'General'}\n\nPor favor, confirmame stock, plazos de entrega en Zona Sur y precio. ¡Gracias!`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
