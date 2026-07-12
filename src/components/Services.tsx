@@ -9,6 +9,49 @@ const ICON_MAP: Record<string, any> = {
   Coins
 };
 
+const COLOR_SCHEMES = [
+  {
+    theme: "blue",
+    border: "hover:border-blue-200",
+    shadow: "hover:shadow-[0_25px_50px_rgba(59,130,246,0.06)]",
+    bgGlow: "bg-blue-100/30",
+    iconBg: "bg-blue-50 border-blue-100 group-hover:bg-blue-600 group-hover:border-blue-600",
+    iconColor: "text-blue-600 group-hover:text-white",
+    textColor: "group-hover:text-blue-600",
+    barColor: "bg-blue-500"
+  },
+  {
+    theme: "emerald",
+    border: "hover:border-emerald-200",
+    shadow: "hover:shadow-[0_25px_50px_rgba(16,185,129,0.06)]",
+    bgGlow: "bg-emerald-100/30",
+    iconBg: "bg-emerald-50 border-emerald-100 group-hover:bg-emerald-600 group-hover:border-emerald-600",
+    iconColor: "text-emerald-600 group-hover:text-white",
+    textColor: "group-hover:text-emerald-600",
+    barColor: "bg-emerald-500"
+  },
+  {
+    theme: "purple",
+    border: "hover:border-purple-200",
+    shadow: "hover:shadow-[0_25px_50px_rgba(139,92,246,0.06)]",
+    bgGlow: "bg-purple-100/30",
+    iconBg: "bg-purple-50 border-purple-100 group-hover:bg-purple-600 group-hover:border-purple-600",
+    iconColor: "text-purple-600 group-hover:text-white",
+    textColor: "group-hover:text-purple-600",
+    barColor: "bg-purple-500"
+  },
+  {
+    theme: "rose",
+    border: "hover:border-rose-200",
+    shadow: "hover:shadow-[0_25px_50px_rgba(244,63,94,0.06)]",
+    bgGlow: "bg-rose-100/30",
+    iconBg: "bg-rose-50 border-rose-100 group-hover:bg-rose-600 group-hover:border-rose-600",
+    iconColor: "text-rose-600 group-hover:text-white",
+    textColor: "group-hover:text-rose-600",
+    barColor: "bg-rose-500"
+  }
+];
+
 export default function Services() {
   return (
     <section id="servicios" className="py-24 bg-white text-neutral-900 relative border-b border-neutral-100">
@@ -30,30 +73,38 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {SERVICES.map((srv, index) => {
             const IconComp = ICON_MAP[srv.iconName] || Truck;
+            const colors = COLOR_SCHEMES[index % COLOR_SCHEMES.length];
             return (
               <motion.div
                 key={index}
-                className="p-8 bg-slate-50/60 hover:bg-white border border-neutral-100 hover:border-blue-100 hover:shadow-xl hover:shadow-blue-900/5 rounded-[2rem] transition-all duration-350 backdrop-blur-sm group"
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className={`p-8 bg-white border border-neutral-100 ${colors.border} ${colors.shadow} rounded-[2rem] transition-all duration-300 relative overflow-hidden group shadow-[0_4px_25px_rgba(0,0,0,0.01)]`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
               >
+                {/* Background Glow */}
+                <div className={`absolute -top-12 -right-12 w-28 h-28 ${colors.bgGlow} rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none`} />
+
                 {/* Icon Container */}
-                <div className="w-12 h-12 bg-white border border-neutral-200 flex items-center justify-center mb-6 group-hover:border-blue-500 rounded-2xl transition-all shadow-sm">
-                  <IconComp className="w-5 h-5 text-blue-600 transition-colors" />
+                <div className={`w-14 h-14 ${colors.iconBg} border flex items-center justify-center mb-6 rounded-2xl group-hover:scale-110 transition-all duration-300 shadow-sm`}>
+                  <IconComp className={`w-6 h-6 ${colors.iconColor} transition-colors duration-300`} />
                 </div>
 
-                <h3 className="text-lg font-serif text-neutral-900 mb-3 group-hover:text-blue-600 transition-colors font-semibold">
+                <h3 className={`text-lg font-serif text-neutral-900 mb-3 ${colors.textColor} transition-colors font-bold tracking-tight`}>
                   {srv.title}
                 </h3>
                 
                 <p className="text-neutral-500 text-xs leading-relaxed font-sans">
                   {srv.description}
                 </p>
+
+                {/* Left side vertical accent bar */}
+                <div className={`absolute left-0 top-0 bottom-0 w-1 ${colors.barColor} transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top`} />
               </motion.div>
             );
           })}

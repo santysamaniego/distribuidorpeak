@@ -76,6 +76,7 @@ export default function FeaturedProducts() {
               group={group}
               onViewDetails={setActiveProductModal}
               onConsult={handleProductConsultation}
+              isFeatured={true}
             />
           ))}
         </div>

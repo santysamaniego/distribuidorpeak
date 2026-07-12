@@ -9,9 +9,10 @@ interface ProductCardProps {
   group: GroupedProduct;
   onViewDetails: (product: Product) => void;
   onConsult: (product: Product) => void;
+  isFeatured?: boolean;
 }
 
-export default function ProductCard({ group, onViewDetails, onConsult }: ProductCardProps) {
+export default function ProductCard({ group, onViewDetails, onConsult, isFeatured = false }: ProductCardProps) {
   // Safe variety selection state
   const [selectedId, setSelectedId] = useState<string>(
     group.varieties.find(v => v.highlighted)?.id || group.varieties[0]?.id || ""
@@ -81,8 +82,8 @@ export default function ProductCard({ group, onViewDetails, onConsult }: Product
           </p>
         </div>
 
-        {/* Varieties Selector - Rendered only if there are multiple packaging sizes */}
-        {group.varieties.length > 1 && (
+        {/* Varieties Selector - Hidden in compact featured mode */}
+        {!isFeatured && group.varieties.length > 1 && (
           <div className="mb-5 bg-slate-50/50 border border-slate-100/80 p-3 rounded-2xl">
             <span className="block text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-extrabold mb-2 px-1">
               Seleccionar Presentación
@@ -109,57 +110,71 @@ export default function ProductCard({ group, onViewDetails, onConsult }: Product
           </div>
         )}
 
-        {/* Technical Specification Matrix Shelf */}
-        <div className="mb-6 bg-slate-50/30 border border-neutral-100 rounded-2xl p-4">
-          <div className="grid grid-cols-3 gap-3">
-            <div className="flex flex-col">
-              <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
-                <Hash className="w-2.5 h-2.5 text-blue-500" /> CÓDIGO
-              </span>
-              <span className="text-[10px] font-mono text-neutral-800 font-extrabold truncate" title={code}>
-                {code}
-              </span>
-            </div>
-            
-            <div className="flex flex-col">
-              <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
-                <Package className="w-2.5 h-2.5 text-blue-500" /> {capacity ? "GAL/LT" : "ENVASE"}
-              </span>
-              <span className="text-[10px] font-sans text-neutral-800 font-extrabold truncate" title={capacity || envase}>
-                {capacity || envase}
-              </span>
-            </div>
+        {/* Technical Specification Matrix Shelf - Hidden in compact featured mode */}
+        {!isFeatured && (
+          <div className="mb-6 bg-slate-50/30 border border-neutral-100 rounded-2xl p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col">
+                <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
+                  <Hash className="w-2.5 h-2.5 text-blue-500" /> CÓDIGO
+                </span>
+                <span className="text-[10px] font-mono text-neutral-800 font-extrabold truncate" title={code}>
+                  {code}
+                </span>
+              </div>
+              
+              <div className="flex flex-col">
+                <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
+                  <Package className="w-2.5 h-2.5 text-blue-500" /> {capacity ? "GAL/LT" : "ENVASE"}
+                </span>
+                <span className="text-[10px] font-sans text-neutral-800 font-extrabold truncate" title={capacity || envase}>
+                  {capacity || envase}
+                </span>
+              </div>
 
-            <div className="flex flex-col">
-              <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
-                <Grid className="w-2.5 h-2.5 text-blue-500" /> U. PALLET
-              </span>
-              <span className="text-[10px] font-sans text-neutral-800 font-extrabold truncate">
-                {palletQty || "—"}
-              </span>
+              <div className="flex flex-col">
+                <span className="text-[8px] font-sans text-neutral-400 uppercase tracking-widest font-bold mb-1 flex items-center gap-1">
+                  <Grid className="w-2.5 h-2.5 text-blue-500" /> U. PALLET
+                </span>
+                <span className="text-[10px] font-sans text-neutral-800 font-extrabold truncate">
+                  {palletQty || "—"}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Fully Rounded Action CTAs */}
-      <div className="flex gap-2.5 mt-auto pt-2">
-        <button
-          onClick={() => onViewDetails(activeProduct)}
-          className="flex-1 py-3 px-4 bg-slate-50 border border-neutral-200 hover:border-neutral-300 text-neutral-600 hover:text-neutral-900 text-[10px] font-sans font-bold uppercase tracking-widest transition-all duration-300 rounded-full flex items-center justify-center gap-1"
-        >
-          <Info className="w-3 h-3 text-neutral-400 group-hover:text-neutral-600" />
-          <span>Ficha Técnica</span>
-        </button>
-        <button
-          onClick={() => onConsult(activeProduct)}
-          title={`Consultar disponibilidad de ${activeProduct.name}`}
-          className="flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-sans font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-1 rounded-full shadow-md shadow-blue-500/10 hover:shadow-blue-500/20"
-        >
-          <span>Consultar</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
-        </button>
-      </div>
+      {isFeatured ? (
+        <div className="mt-4 pt-2">
+          <button
+            onClick={() => onViewDetails(activeProduct)}
+            className="w-full py-4 px-5 bg-neutral-950 text-white hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-500/20 text-[10px] font-sans font-extrabold uppercase tracking-[0.2em] transition-all duration-300 rounded-full flex items-center justify-center gap-2 group/btn border border-neutral-900"
+          >
+            <span>VER MÁS DETALLES</span>
+            <ArrowUpRight className="w-4 h-4 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
+          </button>
+        </div>
+      ) : (
+        <div className="flex gap-2.5 mt-auto pt-2">
+          <button
+            onClick={() => onViewDetails(activeProduct)}
+            className="flex-1 py-3 px-4 bg-slate-50 border border-neutral-200 hover:border-neutral-300 text-neutral-600 hover:text-neutral-900 text-[10px] font-sans font-bold uppercase tracking-widest transition-all duration-300 rounded-full flex items-center justify-center gap-1"
+          >
+            <Info className="w-3 h-3 text-neutral-400 group-hover:text-neutral-600" />
+            <span>Ficha Técnica</span>
+          </button>
+          <button
+            onClick={() => onConsult(activeProduct)}
+            title={`Consultar disponibilidad de ${activeProduct.name}`}
+            className="flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-sans font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-1 rounded-full shadow-md shadow-blue-500/10 hover:shadow-blue-500/20"
+          >
+            <span>Consultar</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
     </motion.div>
   );
 }

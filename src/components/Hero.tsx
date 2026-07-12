@@ -43,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-6xl lg:text-7.5xl font-serif tracking-tight leading-[1.08] mb-6 max-w-4xl font-medium"
+          className="text-4xl sm:text-6xl lg:text-7.5xl font-serif tracking-tight leading-[1.08] mb-6 max-w-4xl font-medium [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]"
         >
           <span className="text-shine inline-block py-1">Lubricación de alto rendimiento</span> <br />
           <span className="text-shine-blue italic font-normal font-serif inline-block py-1">PEAK® Premium</span>
@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-neutral-300 text-sm sm:text-base lg:text-lg max-w-3xl mb-12 leading-relaxed font-sans"
+          className="text-neutral-300 text-sm sm:text-base lg:text-lg max-w-3xl mb-12 leading-relaxed font-sans [text-shadow:_0_1px_6px_rgba(0,0,0,0.8)]"
         >
           Como <strong className="text-white">Distribuidor Mayorista</strong> oficial de PEAK®, presentamos un <strong className="text-white">Portfolio Profesional</strong> de lubricantes, grasas y refrigerantes bajo rigurosos estándares globales de equipo original. Abastecimiento inmediato con entrega bonificada y asesoramiento técnico integral en Zona Sur.
         </motion.p>
