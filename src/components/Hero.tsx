@@ -22,17 +22,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] lg:min-h-[95vh] bg-neutral-950 text-white flex flex-col items-center justify-center overflow-hidden py-24 border-b border-neutral-900">
       
-      {/* Background Hero Banner Image with premium dark overlay and vignetting */}
+      {/* Background Hero Banner Image with premium light overlay */}
       <div className="absolute inset-0 z-0 bg-neutral-950">
         <img
           src="/fondo_hero.png"
           alt="PEAK Automotive Lubricants Banner"
           referrerPolicy="no-referrer"
-          className="object-cover w-full h-full opacity-45 scale-100 filter brightness-[0.7] contrast-[1.05]"
+          className="object-cover w-full h-full opacity-80 scale-100 filter brightness-[0.95] contrast-[1.02]"
         />
-        {/* Soft, rich dark gradient shadows for absolute legibility */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,10,10,0.1)_0%,rgba(10,10,10,0.85)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/40 via-neutral-950/70 to-neutral-950" />
+        {/* Extremely soft, subtle overlays to preserve text readability while showing the image beautifully */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,10,10,0.05)_0%,rgba(10,10,10,0.3)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/20 via-neutral-950/40 to-neutral-950/90" />
       </div>
 
       {/* Hero Content Container */}
