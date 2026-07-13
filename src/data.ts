@@ -88,18 +88,46 @@ export const PRODUCTS: Product[] = [
   },
   // Category: Aceite de moto
   {
-    id: "PK-AM-401",
-    name: "PEAK Moto 4T 10W-40 Synthetic",
+    id: "LA0343-JN023-002",
+    name: "PEAK 4T MOTORCYCLE OIL SAE 20W-50 (JASO MA/MA2 - API SM) (Caja 12 x 1/4 Gal)",
     categoryId: "aceite-moto",
-    description: "Lubricante sintético de alto desempeño para motocicletas de 4 tiempos. Ofrece excelente fricción para un acople perfecto de embrague húmedo.",
+    description: "Lubricante multigrado premium de alto rendimiento formulado especialmente para motores de motocicletas de cuatro tiempos. Su avanzada tecnología protege contra el desgaste, mantiene la limpieza del motor y asegura un excelente acople del embrague húmedo bajo las condiciones de manejo más exigentes.",
     highlighted: true,
     specs: [
-      { label: "Viscosidad", value: "10W-40" },
-      { label: "Motores", value: "4 Tiempos" },
-      { label: "Normativa", value: "JASO MA2 / API SL" },
-      { label: "Presentación", value: "1 Litro" }
+      { label: "Código", value: "LA0343-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
     ],
     image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA0220-JN023-002",
+    name: "PEAK 2T MOTORCYCLE OIL (API TC - JASO FB/FC) (Caja 12 x 1/4 Gal)",
+    categoryId: "aceite-moto",
+    description: "Aceite de alto rendimiento formulado para motores de dos tiempos enfriados por aire. Su mezcla avanzada minimiza la formación de depósitos, previene el desgaste del motor y reduce la emisión de humos, cumpliendo con los exigentes estándares de JASO y API.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA0220-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA0211-JN023-002",
+    name: "PEAK TC-W3 PREMIUM OUTBOARD (TC-W3) (Caja 12 x 1/4 Gal)",
+    categoryId: "aceite-moto",
+    description: "Aceite de calidad premium para motores fuera de borda de dos tiempos de alto rendimiento. Proporciona una lubricación superior y una excelente protección contra la herrumbre y la corrosión en ambientes marinos severos, minimizando los depósitos en las bujías y el pistón.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA0211-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=400"
   },
   // Category: Grasa
   {
