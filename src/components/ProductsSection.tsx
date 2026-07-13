@@ -255,7 +255,7 @@ export default function ProductsSection({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
             >
               {CATEGORIES.map((cat, idx) => {
                 const stats = categoryStats[cat.id] || { total: 0, unique: 0 };
@@ -272,8 +272,8 @@ export default function ProductsSection({
                         behavior: "smooth"
                       });
                     }}
-                    className="group relative h-[270px] rounded-[2rem] bg-neutral-950 overflow-hidden cursor-pointer shadow-[0_12px_30px_-12px_rgba(0,0,0,0.12)] hover:shadow-[0_25px_50px_rgba(59,130,246,0.15)] transition-all duration-500 border border-neutral-100 hover:border-blue-300/60"
-                    whileHover={{ y: -6 }}
+                    className="group relative h-[210px] rounded-[1.8rem] bg-neutral-950 overflow-hidden cursor-pointer shadow-[0_10px_25px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.12)] transition-all duration-500 border border-neutral-100 hover:border-blue-300/60"
+                    whileHover={{ y: -5 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05, duration: 0.5, ease: "easeOut" }}
@@ -285,7 +285,7 @@ export default function ProductsSection({
                       referrerPolicy="no-referrer"
                       className={`absolute inset-0 w-full h-full transition-all duration-700 ease-out ${
                         isLogo 
-                          ? "object-contain p-10 pb-24 opacity-80 group-hover:opacity-100 group-hover:scale-105" 
+                          ? "object-contain p-8 pb-16 opacity-80 group-hover:opacity-100 group-hover:scale-105" 
                           : "object-cover opacity-50 group-hover:opacity-35 group-hover:scale-110"
                       }`}
                     />
@@ -297,33 +297,33 @@ export default function ProductsSection({
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.15),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                     {/* Upper decorative index tag */}
-                    <div className="absolute top-5 right-5 bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full z-10">
+                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md border border-white/15 px-2.5 py-0.5 rounded-full z-10">
                       <span className="text-[8px] font-mono text-white/80 font-bold uppercase tracking-widest">
                         LINE {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                       </span>
                     </div>
 
                     {/* Content Assembly (Bottom-Weighted) */}
-                    <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end z-10">
+                    <div className="absolute inset-x-0 bottom-0 p-4.5 flex flex-col justify-end z-10">
                       
                       {/* Floating Circle Icon */}
-                      <div className="w-10 h-10 bg-white border border-neutral-200/20 text-blue-600 rounded-full flex items-center justify-center mb-3 shadow-md group-hover:bg-blue-600 group-hover:text-white group-hover:scale-105 transition-all duration-300">
+                      <div className="w-8 h-8 bg-white border border-neutral-200/20 text-blue-600 rounded-full flex items-center justify-center mb-2.5 shadow-md group-hover:bg-blue-600 group-hover:text-white group-hover:scale-105 transition-all duration-300">
                         {getCategoryIcon(cat.iconName)}
                       </div>
 
                       {/* Display Typography */}
-                      <h3 className="text-lg md:text-xl font-serif text-white mb-2 leading-tight tracking-tight font-semibold group-hover:text-blue-100 transition-colors">
+                      <h3 className="text-base font-serif text-white mb-1 leading-tight tracking-tight font-semibold group-hover:text-blue-100 transition-colors">
                         {cat.name}
                       </h3>
 
                       {/* Descriptive Summary Footer */}
-                      <div className="flex items-center justify-between border-t border-white/10 pt-3 mt-1">
+                      <div className="flex items-center justify-between border-t border-white/10 pt-2.5 mt-0.5">
                         <span className="text-[9px] font-sans text-neutral-300 uppercase tracking-widest font-extrabold">
                           {stats.unique} {stats.unique === 1 ? "Línea" : "Líneas"} • {stats.total} {stats.total === 1 ? "Envase" : "Envases"}
                         </span>
                         
                         {/* Dynamic Enter Arrow Button */}
-                        <div className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-blue-400 group-hover:bg-blue-600 transition-all duration-300">
+                        <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-blue-400 group-hover:bg-blue-600 transition-all duration-300">
                           <ChevronRight className="w-3.5 h-3.5" />
                         </div>
                       </div>

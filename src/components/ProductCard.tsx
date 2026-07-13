@@ -36,7 +36,11 @@ export default function ProductCard({ group, onViewDetails, onConsult, isFeature
   return (
     <motion.div
       layout
-      className="group relative bg-white border border-neutral-100 hover:border-blue-100 transition-all duration-500 flex flex-col justify-between overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.06)] p-6 rounded-[2.5rem]"
+      className={`group relative bg-white border border-neutral-100 hover:border-blue-100 transition-all duration-500 flex flex-col justify-between overflow-hidden ${
+        isFeatured
+          ? "shadow-[0_4px_15px_rgba(0,0,0,0.01)] hover:shadow-[0_12px_28px_rgba(59,130,246,0.04)] p-4 rounded-[1.8rem] max-w-sm mx-auto w-full"
+          : "shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.06)] p-6 rounded-[2.5rem]"
+      }`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98 }}
@@ -44,17 +48,25 @@ export default function ProductCard({ group, onViewDetails, onConsult, isFeature
     >
       <div>
         {/* Top Badges */}
-        <div className="flex justify-between items-center mb-4">
-          <span className="text-[9px] font-sans tracking-[0.15em] text-blue-600 uppercase font-extrabold flex items-center gap-1.5 bg-blue-50/50 px-3 py-1 rounded-full">
-            <ShieldCheck className="w-3.5 h-3.5 text-blue-500" /> ORIGINAL PEAK
+        <div className={`flex justify-between items-center ${isFeatured ? "mb-2.5" : "mb-4"}`}>
+          <span className={`font-sans tracking-[0.15em] text-blue-600 uppercase font-extrabold flex items-center gap-1 bg-blue-50/50 rounded-full ${
+            isFeatured ? "text-[8px] px-2 py-0.5" : "text-[9px] px-3 py-1"
+          }`}>
+            <ShieldCheck className={`${isFeatured ? "w-2.5 h-2.5" : "w-3.5 h-3.5"} text-blue-500`} /> ORIGINAL PEAK
           </span>
-          <span className="text-[9px] font-mono font-bold text-neutral-400 bg-slate-100/80 px-2.5 py-1 rounded-full tracking-wider">
+          <span className={`font-mono font-bold text-neutral-400 bg-slate-100/80 rounded-full tracking-wider ${
+            isFeatured ? "text-[8px] px-2 py-0.5" : "text-[9px] px-2.5 py-1"
+          }`}>
             #{code}
           </span>
         </div>
 
         {/* Ambient Display Image Container */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-b from-blue-50/10 to-blue-50/30 rounded-[2rem] flex items-center justify-center p-6 mb-5 transition-all duration-500 group-hover:from-blue-50/20 group-hover:to-blue-50/40">
+        <div className={`relative w-full overflow-hidden bg-gradient-to-b from-blue-50/10 to-blue-50/30 flex items-center justify-center transition-all duration-500 group-hover:from-blue-50/20 group-hover:to-blue-50/40 ${
+          isFeatured 
+            ? "aspect-[1.5/1] rounded-[1.3rem] p-3 mb-3" 
+            : "aspect-[4/3] rounded-[2rem] p-6 mb-5"
+        }`}>
           <img
             src={activeProduct.image}
             alt={activeProduct.name}
@@ -63,21 +75,29 @@ export default function ProductCard({ group, onViewDetails, onConsult, isFeature
           />
 
           {activeProduct.highlighted && (
-            <div className="absolute top-4 right-4 bg-blue-600 text-white text-[8px] font-sans font-extrabold tracking-widest px-3 py-1.5 rounded-full z-20 shadow-sm shadow-blue-500/10">
+            <div className={`absolute bg-blue-600 text-white font-sans font-extrabold tracking-widest rounded-full z-20 shadow-sm shadow-blue-500/10 ${
+              isFeatured ? "top-2 right-2 text-[7px] px-2 py-1" : "top-4 right-4 text-[8px] px-3 py-1.5"
+            }`}>
               DESTACADO
             </div>
           )}
         </div>
 
         {/* Header content details */}
-        <div className="mb-4">
-          <span className="text-[9px] font-sans tracking-[0.15em] text-blue-500 uppercase font-extrabold block mb-1">
+        <div className={isFeatured ? "mb-2" : "mb-4"}>
+          <span className={`font-sans tracking-[0.15em] text-blue-500 uppercase font-extrabold block mb-0.5 ${
+            isFeatured ? "text-[8px]" : "text-[9px]"
+          }`}>
             {CATEGORIES.find((c) => c.id === activeProduct.categoryId)?.name || "LUBRICANTE"}
           </span>
-          <h3 className="text-lg font-serif text-neutral-900 mb-1.5 leading-tight group-hover:text-blue-600 transition-colors font-semibold">
+          <h3 className={`font-serif text-neutral-900 leading-tight group-hover:text-blue-600 transition-colors font-semibold ${
+            isFeatured ? "text-base mb-1" : "text-lg mb-1.5"
+          }`}>
             {group.baseName}
           </h3>
-          <p className="text-neutral-500 text-xs leading-relaxed font-sans line-clamp-3">
+          <p className={`text-neutral-500 leading-relaxed font-sans ${
+            isFeatured ? "text-[11px] line-clamp-2" : "text-xs line-clamp-3"
+          }`}>
             {activeProduct.description}
           </p>
         </div>
@@ -147,13 +167,13 @@ export default function ProductCard({ group, onViewDetails, onConsult, isFeature
 
       {/* Fully Rounded Action CTAs */}
       {isFeatured ? (
-        <div className="mt-4 pt-2">
+        <div className="mt-2.5 pt-1">
           <button
             onClick={() => onViewDetails(activeProduct)}
-            className="w-full py-4 px-5 bg-neutral-950 text-white hover:bg-blue-600 hover:shadow-xl hover:shadow-blue-500/20 text-[10px] font-sans font-extrabold uppercase tracking-[0.2em] transition-all duration-300 rounded-full flex items-center justify-center gap-2 group/btn border border-neutral-900"
+            className="w-full py-2.5 px-4 bg-neutral-950 text-white hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/15 text-[9px] font-sans font-extrabold uppercase tracking-[0.15em] transition-all duration-300 rounded-full flex items-center justify-center gap-1.5 group/btn border border-neutral-900"
           >
-            <span>VER MÁS DETALLES</span>
-            <ArrowUpRight className="w-4 h-4 transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
+            <span>VER DETALLES</span>
+            <ArrowUpRight className="w-3.5 h-3.5 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
           </button>
         </div>
       ) : (

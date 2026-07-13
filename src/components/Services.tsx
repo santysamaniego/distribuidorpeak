@@ -54,52 +54,57 @@ const COLOR_SCHEMES = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-24 bg-white text-neutral-900 relative border-b border-neutral-100">
+    <section id="servicios" className="py-16 bg-white text-neutral-900 relative border-b border-neutral-100">
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-50/20 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Title Block */}
-        <div className="text-center mb-16">
-          <span className="text-[11px] font-sans tracking-[0.25em] text-blue-600 uppercase block mb-3 font-extrabold">
+        <div className="text-center mb-10">
+          <span className="text-[10px] font-sans tracking-[0.25em] text-blue-600 uppercase block mb-2 font-extrabold">
             NUESTROS SERVICIOS COMERCIALES
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight text-neutral-900 mb-4 font-medium">
+          <h2 className="text-2xl md:text-4xl font-serif tracking-tight text-neutral-900 mb-3 font-medium">
             Soporte estratégico para comercios
           </h2>
-          <p className="max-w-xl mx-auto text-neutral-500 text-sm leading-relaxed font-sans">
+          <p className="max-w-xl mx-auto text-neutral-500 text-xs leading-relaxed font-sans">
             Garantizo un servicio de entrega directo y asistencia comercial personalizada para optimizar las operaciones de su lubricentro, taller o flota comercial.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((srv, index) => {
+        {/* Services Grid (Restricted to exactly 3 items in a neat 3-column layout) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {SERVICES.slice(0, 3).map((srv, index) => {
             const IconComp = ICON_MAP[srv.iconName] || Truck;
             const colors = COLOR_SCHEMES[index % COLOR_SCHEMES.length];
             return (
               <motion.div
                 key={index}
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className={`p-8 bg-white border border-neutral-100 ${colors.border} ${colors.shadow} rounded-[2rem] transition-all duration-300 relative overflow-hidden group shadow-[0_4px_25px_rgba(0,0,0,0.01)]`}
-                initial={{ opacity: 0, y: 30 }}
+                whileHover={{ y: -6, scale: 1.015 }}
+                transition={{ type: "spring", stiffness: 350, damping: 22 }}
+                className={`p-6 bg-white border border-neutral-100 border-b-4 hover:border-b-blue-600 ${colors.border} ${colors.shadow} rounded-[2rem] transition-all duration-300 relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.01)]`}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
               >
                 {/* Background Glow */}
                 <div className={`absolute -top-12 -right-12 w-28 h-28 ${colors.bgGlow} rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none`} />
 
-                {/* Icon Container */}
-                <div className={`w-14 h-14 ${colors.iconBg} border flex items-center justify-center mb-6 rounded-2xl group-hover:scale-110 transition-all duration-300 shadow-sm`}>
-                  <IconComp className={`w-6 h-6 ${colors.iconColor} transition-colors duration-300`} />
+                {/* Top Technical Code Label & Icon */}
+                <div className="flex justify-between items-center mb-5">
+                  <div className={`w-11 h-11 ${colors.iconBg} border flex items-center justify-center rounded-xl group-hover:scale-110 transition-all duration-300 shadow-sm`}>
+                    <IconComp className={`w-4 h-4 ${colors.iconColor} transition-colors duration-300`} />
+                  </div>
+                  <span className="font-mono text-[10px] font-bold text-neutral-300 group-hover:text-neutral-400 transition-colors">
+                    [{String(index + 1).padStart(2, '0')}]
+                  </span>
                 </div>
 
-                <h3 className={`text-lg font-serif text-neutral-900 mb-3 ${colors.textColor} transition-colors font-bold tracking-tight`}>
+                <h3 className={`text-base font-serif text-neutral-900 mb-2 ${colors.textColor} transition-colors font-bold tracking-tight`}>
                   {srv.title}
                 </h3>
                 
-                <p className="text-neutral-500 text-xs leading-relaxed font-sans">
+                <p className="text-neutral-500 text-[11px] leading-relaxed font-sans">
                   {srv.description}
                 </p>
 

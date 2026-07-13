@@ -59,74 +59,89 @@ export default function AboutUs() {
             damping: 15,
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1: Soporte y Trayectoria (Warm Amber Style) */}
             <motion.div 
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="p-8 bg-white border border-neutral-100 hover:border-amber-200 hover:shadow-[0_20px_40px_rgba(245,158,11,0.06)] transition-all duration-300 rounded-[2.5rem] relative overflow-hidden group shadow-[0_4px_25px_rgba(0,0,0,0.01)]"
+              whileHover={{ y: -6, scale: 1.015 }}
+              transition={{ type: "spring", stiffness: 350, damping: 22 }}
+              className="p-6 bg-white border border-neutral-100 hover:border-amber-200 hover:shadow-[0_15px_30px_rgba(245,158,11,0.05)] transition-all duration-300 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-[1rem] rounded-bl-[1rem] relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.01)]"
             >
-              {/* Background Glow */}
-              <div className="absolute -top-12 -right-12 w-28 h-28 bg-amber-100/30 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              {/* Giant Background Number */}
+              <span className="absolute top-4 right-6 text-6xl font-mono font-black text-neutral-100/70 select-none pointer-events-none group-hover:text-amber-100/40 group-hover:scale-105 transition-all duration-500">
+                01
+              </span>
               
-              <div className="w-14 h-14 bg-amber-50 border border-amber-100 flex items-center justify-center mb-6 rounded-2xl group-hover:scale-110 group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300 shadow-sm">
-                <Award className="w-6 h-6 text-amber-600 group-hover:text-white transition-colors duration-300" />
+              {/* Background Glow */}
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-amber-100/20 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              
+              <div className="w-12 h-12 bg-amber-50 border border-amber-100 flex items-center justify-center mb-5 rounded-xl group-hover:scale-110 group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300 shadow-sm relative z-10">
+                <Award className="w-5 h-5 text-amber-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-serif text-neutral-900 mb-3 group-hover:text-amber-600 transition-colors font-bold tracking-tight">
+              <h3 className="text-base font-serif text-neutral-900 mb-2.5 group-hover:text-amber-600 transition-colors font-bold tracking-tight relative z-10">
                 Soporte y Trayectoria
               </h3>
-              <p className="text-neutral-500 text-xs leading-relaxed font-sans">
+              <p className="text-neutral-500 text-[11px] leading-relaxed font-sans relative z-10 max-w-[90%]">
                 PEAK es líder absoluto en el mercado americano. Mi labor es acercar esa tecnología y respaldo técnico oficial directamente a su taller o negocio local.
               </p>
               
-              {/* Bottom accent line */}
-              <div className="absolute bottom-0 inset-x-0 h-1 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              {/* Decorative accent dot */}
+              <div className="absolute bottom-4 right-6 w-1.5 h-1.5 rounded-full bg-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
 
             {/* Card 2: Alta Operatividad (Cool Indigo Style) */}
             <motion.div 
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="p-8 bg-white border border-neutral-100 hover:border-indigo-200 hover:shadow-[0_20px_40px_rgba(99,102,241,0.06)] transition-all duration-300 rounded-[2.5rem] relative overflow-hidden group shadow-[0_4px_25px_rgba(0,0,0,0.01)]"
+              whileHover={{ y: -6, scale: 1.015 }}
+              transition={{ type: "spring", stiffness: 350, damping: 22 }}
+              className="p-6 bg-white border border-neutral-100 hover:border-indigo-200 hover:shadow-[0_15px_30px_rgba(99,102,241,0.05)] transition-all duration-300 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-[1rem] rounded-bl-[1rem] relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.01)]"
             >
-              {/* Background Glow */}
-              <div className="absolute -top-12 -right-12 w-28 h-28 bg-indigo-100/30 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              {/* Giant Background Number */}
+              <span className="absolute top-4 right-6 text-6xl font-mono font-black text-neutral-100/70 select-none pointer-events-none group-hover:text-indigo-100/40 group-hover:scale-105 transition-all duration-500">
+                02
+              </span>
               
-              <div className="w-14 h-14 bg-indigo-50 border border-indigo-100 flex items-center justify-center mb-6 rounded-2xl group-hover:scale-110 group-hover:bg-indigo-500 group-hover:border-indigo-500 transition-all duration-300 shadow-sm">
-                <Flame className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
+              {/* Background Glow */}
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-indigo-100/20 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              
+              <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 flex items-center justify-center mb-5 rounded-xl group-hover:scale-110 group-hover:bg-indigo-500 group-hover:border-indigo-500 transition-all duration-300 shadow-sm relative z-10">
+                <Flame className="w-5 h-5 text-indigo-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-serif text-neutral-900 mb-3 group-hover:text-indigo-600 transition-colors font-bold tracking-tight">
+              <h3 className="text-base font-serif text-neutral-900 mb-2.5 group-hover:text-indigo-600 transition-colors font-bold tracking-tight relative z-10">
                 Alta Operatividad
               </h3>
-              <p className="text-neutral-500 text-xs leading-relaxed font-sans">
+              <p className="text-neutral-500 text-[11px] leading-relaxed font-sans relative z-10 max-w-[90%]">
                 Los lubricantes y fluidos que distribuyo están diseñados para resistir el desgaste severo, optimizando el rendimiento térmico y mecánico de los motores.
               </p>
               
-              {/* Bottom accent line */}
-              <div className="absolute bottom-0 inset-x-0 h-1 bg-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              {/* Decorative accent dot */}
+              <div className="absolute bottom-4 right-6 w-1.5 h-1.5 rounded-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
 
             {/* Card 3: Garantía Certificada (Vibrant Emerald Style) */}
             <motion.div 
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="p-8 bg-white border border-neutral-100 hover:border-emerald-200 hover:shadow-[0_20px_40px_rgba(16,185,129,0.06)] transition-all duration-300 rounded-[2.5rem] relative overflow-hidden group shadow-[0_4px_25px_rgba(0,0,0,0.01)]"
+              whileHover={{ y: -6, scale: 1.015 }}
+              transition={{ type: "spring", stiffness: 350, damping: 22 }}
+              className="p-6 bg-white border border-neutral-100 hover:border-emerald-200 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] transition-all duration-300 rounded-tl-[3.5rem] rounded-br-[3.5rem] rounded-tr-[1rem] rounded-bl-[1rem] relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.01)]"
             >
-              {/* Background Glow */}
-              <div className="absolute -top-12 -right-12 w-28 h-28 bg-emerald-100/30 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              {/* Giant Background Number */}
+              <span className="absolute top-4 right-6 text-6xl font-mono font-black text-neutral-100/70 select-none pointer-events-none group-hover:text-emerald-100/40 group-hover:scale-105 transition-all duration-500">
+                03
+              </span>
               
-              <div className="w-14 h-14 bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-6 rounded-2xl group-hover:scale-110 group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300 shadow-sm">
-                <ShieldCheck className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
+              {/* Background Glow */}
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-emerald-100/20 rounded-full blur-2xl group-hover:scale-125 transition-all duration-500 pointer-events-none" />
+              
+              <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-5 rounded-xl group-hover:scale-110 group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300 shadow-sm relative z-10">
+                <ShieldCheck className="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-serif text-neutral-900 mb-3 group-hover:text-emerald-600 transition-colors font-bold tracking-tight">
+              <h3 className="text-base font-serif text-neutral-900 mb-2.5 group-hover:text-emerald-600 transition-colors font-bold tracking-tight relative z-10">
                 Garantía Certificada
               </h3>
-              <p className="text-neutral-500 text-xs leading-relaxed font-sans">
+              <p className="text-neutral-500 text-[11px] leading-relaxed font-sans relative z-10 max-w-[90%]">
                 Cada lote despachado cuenta con trazabilidad oficial, protegiendo su inversión con la absoluta confianza de un producto legítimo PEAK.
               </p>
               
-              {/* Bottom accent line */}
-              <div className="absolute bottom-0 inset-x-0 h-1 bg-emerald-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              {/* Decorative accent dot */}
+              <div className="absolute bottom-4 right-6 w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           </div>
         </motion.div>

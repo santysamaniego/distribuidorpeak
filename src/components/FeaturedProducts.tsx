@@ -47,29 +47,29 @@ export default function FeaturedProducts() {
   };
 
   return (
-    <section id="destacados" className="py-24 bg-white text-neutral-800 relative border-b border-neutral-100 overflow-hidden">
+    <section id="destacados" className="py-16 bg-white text-neutral-800 relative border-b border-neutral-100 overflow-hidden">
       {/* Decorative clean radial background */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-50/20 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Title Block */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
           <div>
-            <span className="text-[11px] font-sans tracking-[0.25em] text-blue-600 uppercase block mb-3 font-extrabold">
+            <span className="text-[10px] font-sans tracking-[0.25em] text-blue-600 uppercase block mb-2 font-extrabold">
               RENDIMIENTO MÁXIMO CERTIFICADO
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif tracking-tight text-neutral-900 font-medium">
+            <h2 className="text-2xl md:text-4xl font-serif tracking-tight text-neutral-900 font-medium">
               Línea de productos destacados
             </h2>
           </div>
-          <p className="text-neutral-500 text-sm max-w-sm leading-relaxed font-sans">
+          <p className="text-neutral-500 text-xs max-w-sm leading-relaxed font-sans">
             Las soluciones más solicitadas por lubricentros, talleres y flotas en Zona Sur debido a su excelente rendimiento bajo especificaciones de equipo original.
           </p>
         </div>
 
         {/* Featured Products Showcase - Fully rounded organic card style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredGroups.map((group) => (
             <ProductCard
               key={group.baseName}
