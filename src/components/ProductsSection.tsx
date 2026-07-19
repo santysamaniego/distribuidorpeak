@@ -5,7 +5,8 @@ import { Product, GroupedProduct } from "../types";
 import ProductCard from "./ProductCard";
 import { 
   Search, SlidersHorizontal, ArrowUpRight, X, ShieldCheck, ArrowLeft,
-  ChevronRight, Bike, Cpu, Activity, Database, Droplet, ShieldAlert, Wrench, Package
+  ChevronRight, Bike, Cpu, Activity, Database, Droplet, ShieldAlert, Wrench, Package,
+  Tractor
 } from "lucide-react";
 
 interface ProductsSectionProps {
@@ -31,7 +32,8 @@ export default function ProductsSection({
     "aceite-industrial": "/logo_industriales.png",
     "antifriz-anticongelante": "/logo_antifreeze.png",
     "urea": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=600",
-    "auxiliares": "/logo_auxiliares.png"
+    "auxiliares": "/logo_auxiliares.png",
+    "agro": "https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&q=80&w=600"
   };
 
   const getCategoryIcon = (iconName: string) => {
@@ -43,6 +45,7 @@ export default function ProductsSection({
       case "Droplet": return <Droplet className="w-5 h-5" />;
       case "ShieldAlert": return <ShieldAlert className="w-5 h-5" />;
       case "Wrench": return <Wrench className="w-5 h-5" />;
+      case "Tractor": return <Tractor className="w-5 h-5" />;
       default: return <Package className="w-5 h-5" />;
     }
   };
@@ -180,17 +183,28 @@ export default function ProductsSection({
                   <p className="text-neutral-500 text-xs max-w-xl mt-2 font-sans leading-relaxed">
                     {hasGlobalSearchActive && !isBrowsingCategory 
                       ? `Mostrando coincidencias para "${searchQuery}" en todo el porfolio PEAK®. ` 
+                      : selectedCategory === "agro"
+                      ? "Asesoramiento especializado y soluciones de lubricación de alta resistencia para tractores, cosechadoras y maquinaria vial."
                       : `Usted está explorando las variedades certificadas de ${currentCategoryObj?.name}. Utilice el buscador para agilizar su consulta.`}
                   </p>
                 </div>
 
                 {/* Counter Pill */}
-                <div className="bg-blue-50/50 border border-blue-100 px-5 py-3 rounded-2xl flex items-center gap-3 w-fit">
-                  <SlidersHorizontal className="w-4 h-4 text-blue-600" />
-                  <span className="text-xs font-sans text-neutral-600 font-bold uppercase tracking-wider">
-                    Variedades: <strong className="text-blue-600 font-extrabold">{groupedProducts.length}</strong>
-                  </span>
-                </div>
+                {selectedCategory === "agro" ? (
+                  <div className="bg-emerald-50/50 border border-emerald-100 px-5 py-3 rounded-2xl flex items-center gap-2.5 w-fit">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-sans text-neutral-600 font-bold tracking-wider uppercase">
+                      Contacto Directo
+                    </span>
+                  </div>
+                ) : (
+                  <div className="bg-blue-50/50 border border-blue-100 px-5 py-3 rounded-2xl flex items-center gap-3 w-fit">
+                    <SlidersHorizontal className="w-4 h-4 text-blue-600" />
+                    <span className="text-xs font-sans text-neutral-600 font-bold uppercase tracking-wider">
+                      Variedades: <strong className="text-blue-600 font-extrabold">{groupedProducts.length}</strong>
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           )}
@@ -221,7 +235,7 @@ export default function ProductsSection({
         )}
 
         {/* Inside-Category Search Bar - Displayed contextually inside a category */}
-        {isBrowsingCategory && (
+        {isBrowsingCategory && selectedCategory !== "agro" && (
           <div className="mb-10 bg-slate-50 p-4 rounded-3xl border border-neutral-100 max-w-2xl">
             <div className="relative w-full">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" />
@@ -344,25 +358,128 @@ export default function ProductsSection({
               exit={{ opacity: 0, y: -15 }}
               className="space-y-12"
             >
-              {/* Product Card Grid */}
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                layout
-              >
-                <AnimatePresence mode="popLayout">
-                  {groupedProducts.map((group) => (
-                    <ProductCard
-                      key={group.baseName}
-                      group={group}
-                      onViewDetails={setActiveProductModal}
-                      onConsult={handleProductConsultation}
-                    />
-                  ))}
-                </AnimatePresence>
-              </motion.div>
+              {selectedCategory === "agro" ? (
+                /* Premium Agricultural Category Custom Showcase Card */
+                <div className="bg-white border border-neutral-100 rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_70px_rgba(59,130,246,0.04)] transition-all duration-500 relative flex flex-col lg:flex-row gap-10 items-center">
+                  {/* Subtle Glow Aura */}
+                  <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-blue-500/5 blur-[80px] pointer-events-none" />
+                  
+                  {/* Left Column: Premium Text Content */}
+                  <div className="flex-1 space-y-6 relative z-10 text-left">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-900 text-white rounded-full text-[10px] font-mono tracking-widest uppercase">
+                      <Tractor className="w-3.5 h-3.5 text-blue-400" />
+                      <span>LÍNEA MAQUINARIA AGRÍCOLA</span>
+                    </div>
+
+                    <h3 className="text-3xl md:text-4xl font-serif text-neutral-900 font-semibold tracking-tight leading-tight">
+                      Lubricantes de Máxima Resistencia para el Campo
+                    </h3>
+
+                    <p className="text-neutral-500 text-sm font-sans leading-relaxed">
+                      Desarrollamos soluciones de lubricación de alta performance diseñadas específicamente para tractores, cosechadoras y maquinaria agroindustrial. Nuestra gama especializada asegura una operatividad constante bajo las condiciones climáticas y de suelo más exigentes.
+                    </p>
+
+                    {/* Features list */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mt-0.5 shrink-0">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-sans font-bold text-neutral-900">Protección del Motor</h4>
+                          <p className="text-[11px] text-neutral-400 font-sans mt-0.5">Estabilidad térmica en jornadas intensivas continuas.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mt-0.5 shrink-0">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-sans font-bold text-neutral-900">Transmisiones Integradas</h4>
+                          <p className="text-[11px] text-neutral-400 font-sans mt-0.5">Tecnología UTTO y STOU para frenos húmedos y mandos.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mt-0.5 shrink-0">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-sans font-bold text-neutral-900">Grasas de Alta Adhesividad</h4>
+                          <p className="text-[11px] text-neutral-400 font-sans mt-0.5">Excelente resistencia al agua, polvo y cargas extremas.</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mt-0.5 shrink-0">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-sans font-bold text-neutral-900">Soporte y Asesoramiento</h4>
+                          <p className="text-[11px] text-neutral-400 font-sans mt-0.5">Análisis técnico de aceites y equivalencias directo.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* WhatsApp CTA Action */}
+                    <div className="pt-6">
+                      <button
+                        onClick={() => {
+                          const phoneNumber = "5491172528552"; // Distributor's WhatsApp number
+                          const message = "Hola! Vi la sección de Agro en su catálogo PEAK y me gustaría solicitar información, asesoramiento técnico y precios de lubricantes agrícolas.";
+                          const encodedMessage = encodeURIComponent(message);
+                          window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+                        }}
+                        className="inline-flex items-center gap-2.5 px-8 py-4 bg-blue-600 hover:bg-neutral-900 text-white text-xs font-sans font-semibold tracking-wider uppercase transition-all duration-300 rounded-full shadow-[0_4px_16px_rgba(59,130,246,0.2)] hover:shadow-lg cursor-pointer"
+                      >
+                        <span>Consultar Catálogo Agro</span>
+                        <ArrowUpRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Beautiful Framed Floating Tractor Artwork */}
+                  <div className="w-full lg:w-[42%] relative flex items-center justify-center group/stage">
+                    {/* Circle back glow */}
+                    <div className="absolute w-[240px] h-[240px] rounded-full bg-amber-500/5 blur-[50px] pointer-events-none group-hover/stage:bg-amber-500/10 transition-colors duration-700" />
+                    
+                    <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] w-full border border-neutral-100 shadow-[0_15px_35px_rgba(0,0,0,0.02)] bg-neutral-50 p-2">
+                      <img 
+                        src="https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&q=80&w=800" 
+                        alt="Maquinaria Agrícola PEAK" 
+                        className="w-full h-full object-cover rounded-[1.6rem] filter brightness-[0.97] transition-transform duration-700 ease-out group-hover/stage:scale-105"
+                        referrerPolicy="no-referrer"
+                      />
+                      {/* Floating details pill */}
+                      <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md border border-neutral-100/50 px-3.5 py-1.5 rounded-full text-[9px] font-mono text-neutral-600 shadow-sm flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                        Asesoramiento Inmediato
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Product Card Grid */
+                <motion.div 
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  layout
+                >
+                  <AnimatePresence mode="popLayout">
+                    {groupedProducts.map((group) => (
+                      <ProductCard
+                        key={group.baseName}
+                        group={group}
+                        onViewDetails={setActiveProductModal}
+                        onConsult={handleProductConsultation}
+                      />
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
+              )}
 
               {/* Empty Results State */}
-              {filteredProducts.length === 0 && (
+              {selectedCategory !== "agro" && filteredProducts.length === 0 && (
                 <div className="text-center py-20 bg-slate-50 border border-neutral-150 rounded-[2rem] max-w-2xl mx-auto">
                   <SlidersHorizontal className="w-8 h-8 text-neutral-300 mx-auto mb-4" />
                   <h3 className="text-base font-serif text-neutral-700 mb-1 font-semibold">

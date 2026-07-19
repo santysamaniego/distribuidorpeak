@@ -9,7 +9,8 @@ export const CATEGORIES: Category[] = [
   { id: "aceite-industrial", name: "Aceites Industriales", iconName: "Cpu" },
   { id: "antifriz-anticongelante", name: "Antifriz / Anticongelante", iconName: "Droplet" },
   { id: "urea", name: "Urea", iconName: "ShieldAlert" },
-  { id: "auxiliares", name: "Auxiliares", iconName: "Wrench" }
+  { id: "auxiliares", name: "Auxiliares", iconName: "Wrench" },
+  { id: "agro", name: "Agro", iconName: "Tractor" }
 ];
 
 export const PRODUCTS: Product[] = [
