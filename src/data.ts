@@ -60,30 +60,310 @@ export const PRODUCTS: Product[] = [
   },
   // Category: Fluido de transmisión
   {
-    id: "PK-FT-301",
-    name: "PEAK Full Synthetic Multi-Vehicle ATF",
+    id: "LA3077-TM205-002",
+    name: "PEAK FULL SYNTHETIC MULTI-VEHICLE ATF (TES-295-389 / DEXRON VI / MERCON V / +4) (Tambor 55 Gal)",
     categoryId: "fluido-transmision",
-    description: "Fluido universal sintético de transmisión automática de máxima estabilidad térmica para un cambio de marchas suave y sin fricción.",
+    description: "Fluido de transmisión automática 100% sintético de máxima calidad. Cumple con los rigurosos requisitos de las especificaciones TES-295, DEXRON VI, MERCON V y Mercon +4, garantizando una excelente protección térmica y un cambio de marchas excepcionalmente suave.",
     highlighted: true,
     specs: [
-      { label: "Tipo", value: "Automática (ATF)" },
-      { label: "Base", value: "Sintético" },
-      { label: "Normativa", value: "Dexron VI / Mercon LV" },
-      { label: "Presentación", value: "1 Litro" }
+      { label: "Código", value: "LA3077-TM205-002" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
     ],
     image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
   },
   {
-    id: "PK-FT-302",
-    name: "PEAK Gear Oil SAE 80W-90",
+    id: "LA3077-DP020-002",
+    name: "PEAK FULL SYNTHETIC MULTI-VEHICLE ATF (TES-295-389 / DEXRON VI / MERCON V / +4) (Balde 5 Gal)",
     categoryId: "fluido-transmision",
-    description: "Lubricante de extrema presión para engranajes hipoidales y transmisiones manuales sometidas a cargas severas.",
+    description: "Fluido de transmisión automática 100% sintético de máxima calidad. Cumple con los rigurosos requisitos de las especificaciones TES-295, DEXRON VI, MERCON V y Mercon +4, garantizando una excelente protección térmica y un cambio de marchas excepcionalmente suave.",
     highlighted: false,
     specs: [
-      { label: "Viscosidad", value: "80W-90" },
-      { label: "Base", value: "Mineral EP" },
-      { label: "Normativa", value: "API GL-5" },
-      { label: "Presentación", value: "1 Litro" }
+      { label: "Código", value: "LA3077-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3077-JN023-002",
+    name: "PEAK FULL SYNTHETIC MULTI-VEHICLE ATF (TES-295-389 / DEXRON VI / MERCON V / +4) (Caja 12 x 1/4 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido de transmisión automática 100% sintético de máxima calidad. Cumple con los rigurosos requisitos de las especificaciones TES-295, DEXRON VI, MERCON V y Mercon +4, garantizando una excelente protección térmica y un cambio de marchas excepcionalmente suave.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA3077-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3078-JN023-002",
+    name: "PEAK FULL SYNTHETIC CVT AUTOMATIC TRANSMISSION FLUID (Caja 12 x 1/4 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido 100% sintético premium diseñado específicamente para transmisiones variables continuas (CVT). Ofrece una excelente transferencia de potencia, alta estabilidad ante la fricción y máxima protección contra el desgaste de correas y poleas metálicas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA3078-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3076-TM205-000",
+    name: "PEAK AUTOMATIC TRANSMISSION FLUID MULTI-PURPOSE (DEXRON III / MERCON) (Tambor 55 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido multipropósito de alto desempeño para transmisiones automáticas y sistemas de dirección asistida. Recomendado para vehículos que exigen especificaciones DEXRON III o MERCON, asegurando excelente resistencia a la oxidación y protección antidesgaste.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA3076-TM205-000" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3076-DP020-002",
+    name: "PEAK AUTOMATIC TRANSMISSION FLUID MULTI-PURPOSE (DEXRON III / MERCON) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido multipropósito de alto desempeño para transmisiones automáticas y sistemas de dirección asistida. Recomendado para vehículos que exigen especificaciones DEXRON III o MERCON, asegurando excelente resistencia a la oxidación y protección antidesgaste.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA3076-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3076-JN023-002",
+    name: "PEAK AUTOMATIC TRANSMISSION FLUID MULTI-PURPOSE (DEXRON III / MERCON) (Caja 12 x 1/4 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido multipropósito de alto desempeño para transmisiones automáticas y sistemas de dirección asistida. Recomendado para vehículos que exigen especificaciones DEXRON III o MERCON, asegurando excelente resistencia a la oxidación y protección antidesgaste.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA3076-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3069-TM205-002",
+    name: "PEAK TRACTOR HYDRAULIC FLUID (J20C / 303) (Tambor 55 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido hidráulico multipropósito premium de máxima calidad diseñado para tractores agrícolas y equipos pesados. Proporciona una lubricación excepcional para transmisiones, sistemas hidráulicos, frenos húmedos y mandos finales, previniendo el desgaste y ruidos indeseados.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA3069-TM205-002" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA3069-BP020-002",
+    name: "PEAK TRACTOR HYDRAULIC FLUID (J20C / 303) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Fluido hidráulico multipropósito premium de máxima calidad diseñado para tractores agrícolas y equipos pesados. Proporciona una lubricación excepcional para transmisiones, sistemas hidráulicos, frenos húmedos y mandos finales, previniendo el desgaste y ruidos indeseados.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA3069-BP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2078-DP035-002",
+    name: "PEAK SYNTHETIC GEAR OIL EP SAE 75W-90 (API GL-5) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de transmisión 100% sintético de extrema presión (EP). Formulado para ofrecer una protección térmica y una estabilidad superior a la cizalladura en transmisiones manuales y diferenciales operados en condiciones severas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2078-DP035-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2050-DP020-002",
+    name: "PEAK GEAR OIL EP SAE 80W-90 LIMITED SLIP (API GL-5) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión con aditivos especiales de deslizamiento limitado (Limited Slip). Diseñado para transmisiones y diferenciales de deslizamiento limitado de camiones y camionetas, asegurando óptimo control de fricción y reducción de ruidos.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2050-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2050-JN023-002",
+    name: "PEAK GEAR OIL EP SAE 80W-90 LIMITED SLIP (API GL-5) (Caja 12 x 1/4 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión con aditivos especiales de deslizamiento limitado (Limited Slip). Diseñado para transmisiones y diferenciales de deslizamiento limitado de camiones y camionetas, asegurando óptimo control de fricción y reducción de ruidos.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2050-JN023-002" },
+      { label: "Envase", value: "Caja 12 x 1/4 Gal" },
+      { label: "Gal/Lt", value: "3" },
+      { label: "Unidades x Pallet", value: "80" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2059-TM208-002",
+    name: "PEAK GEAR OIL EP SAE 85W-140 LIMITED SLIP (API GL-5) (Tambor 55 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión de alta viscosidad con modificadores de fricción de deslizamiento limitado. Brinda una película lubricante ultra resistente para proteger diferenciales autoblocantes sometidos a cargas severas y temperaturas elevadas.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2059-TM208-002" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2059-DP020-002",
+    name: "PEAK GEAR OIL EP SAE 85W-140 LIMITED SLIP (API GL-5) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión de alta viscosidad con modificadores de fricción de deslizamiento limitado. Brinda una película lubricante ultra resistente para proteger diferenciales autoblocantes sometidos a cargas severas y temperaturas elevadas.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2059-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2049-TM205-002",
+    name: "PEAK GEAR OIL EP SAE 80W-90 (API GL-5) (Tambor 55 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Aceite premium para engranajes y diferenciales que operan en condiciones severas. Su robusta aditivación de extrema presión protege contra la soldadura, el desgaste prematuro y la herrumbre, maximizando la vida de la transmisión.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2049-TM205-002" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2049-DP020-002",
+    name: "PEAK GEAR OIL EP SAE 80W-90 (API GL-5) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Aceite premium para engranajes y diferenciales que operan en condiciones severas. Su robusta aditivación de extrema presión protege contra la soldadura, el desgaste prematuro y la herrumbre, maximizando la vida de la transmisión.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2049-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2057-TM205-002",
+    name: "PEAK GEAR OIL EP SAE 85W-140 (API GL-5) (Tambor 55 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión de alta viscosidad formulado para diferenciales traseros, cajas de engranajes y mandos finales sometidos a cargas pesadas y de choque continuo. Excelente estabilidad a altas temperaturas de operación.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2057-TM205-002" },
+      { label: "Envase", value: "Tambor 55 Gal" },
+      { label: "Gal/Lt", value: "55" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2057-DP020-002",
+    name: "PEAK GEAR OIL EP SAE 85W-140 (API GL-5) (Balde 5 Gal)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante de extrema presión de alta viscosidad formulado para diferenciales traseros, cajas de engranajes y mandos finales sometidos a cargas pesadas y de choque continuo. Excelente estabilidad a altas temperaturas de operación.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2057-DP020-002" },
+      { label: "Envase", value: "Balde 5 Gal" },
+      { label: "Gal/Lt", value: "5" },
+      { label: "Unidades x Pallet", value: "27" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2256-TM205-003",
+    name: "PEAK GEAR OIL SAE 90 - LOCAL (API GL-1) (Tambor 205 Lts)",
+    categoryId: "fluido-transmision",
+    description: "Aceite lubricante mineral puro para engranajes automotrices e industriales de servicio ligero a moderado donde no se requieran aditivos de extrema presión. Excelente protección natural contra la herrumbre y herradura.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2256-TM205-003" },
+      { label: "Envase", value: "Tambor 205 Lts" },
+      { label: "Gal/Lt", value: "205" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2256-DP020-002",
+    name: "PEAK GEAR OIL SAE 90 - LOCAL (API GL-1) (Balde 20 Lts)",
+    categoryId: "fluido-transmision",
+    description: "Aceite lubricante mineral puro para engranajes automotrices e industriales de servicio ligero a moderado donde no se requieran aditivos de extrema presión. Excelente protección natural contra la herrumbre y herradura.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2256-DP020-002" },
+      { label: "Envase", value: "Balde 20 Lts" },
+      { label: "Gal/Lt", value: "20" },
+      { label: "Unidades x Pallet", value: "48" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2201-TM205-003",
+    name: "PEAK GEAR OIL SAE 140 - LOCAL (API GL-1) (Tambor 205 Lts)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante mineral puro de alta viscosidad SAE 140 formulado para la lubricación de transmisiones manuales y cajas de engranajes operadas bajo condiciones moderadas de velocidad y carga que exigen un nivel de servicio API GL-1.",
+    highlighted: true,
+    specs: [
+      { label: "Código", value: "LA2201-TM205-003" },
+      { label: "Envase", value: "Tambor 205 Lts" },
+      { label: "Gal/Lt", value: "205" },
+      { label: "Unidades x Pallet", value: "4" }
+    ],
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
+  },
+  {
+    id: "LA2201-DP020-002",
+    name: "PEAK GEAR OIL SAE 140 - LOCAL (API GL-1) (Balde 20 Lts)",
+    categoryId: "fluido-transmision",
+    description: "Lubricante mineral puro de alta viscosidad SAE 140 formulado para la lubricación de transmisiones manuales y cajas de engranajes operadas bajo condiciones moderadas de velocidad y carga que exigen un nivel de servicio API GL-1.",
+    highlighted: false,
+    specs: [
+      { label: "Código", value: "LA2201-DP020-002" },
+      { label: "Envase", value: "Balde 20 Lts" },
+      { label: "Gal/Lt", value: "20" },
+      { label: "Unidades x Pallet", value: "48" }
     ],
     image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=400"
   },
