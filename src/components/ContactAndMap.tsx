@@ -171,7 +171,7 @@ export default function ContactAndMap() {
                   </span>
                 </div>
                 <p className="text-neutral-500 text-xs leading-relaxed mb-4 font-sans">
-                  Nuestra red de logística y distribución atiende de manera regular principalmente a comercios minoristas, lubricentros y talleres mecánicos en la <strong>Zona Sur</strong> por el momento. Sin embargo, nos extendemos a varias otras zonas bajo consulta; por favor no dudes en consultarnos para coordinar tu entrega.
+                  Nuestra red de logística y distribución atiende principalmente a comercios minoristas, lubricentros y talleres mecánicos en la <strong>Zona Sur</strong>, y realizamos envíos a todo el país. No dudes en consultarnos para coordinar tu entrega de manera directa.
                 </p>
 
                 {/* Social media follow row */}
@@ -226,4 +226,3 @@ export default function ContactAndMap() {
     </section>
   );
 }
-

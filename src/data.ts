@@ -938,7 +938,7 @@ export const PRODUCTS: Product[] = [
 export const SERVICES: ServiceItem[] = [
   {
     title: "Distribución y Logística Propia",
-    description: "Despachamos de forma inmediata en toda Zona Sur y alrededores. Entregas programadas y de urgencia con flota climatizada para resguardo de la integridad química.",
+    description: "Despachamos de forma inmediata en toda Zona Sur y alrededores. Entregas programadas para resguardo de la integridad química.",
     iconName: "Truck"
   },
   {
@@ -965,7 +965,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "¿Cuál es el área de cobertura para las entregas?",
-    answer: "Nuestra base operativa se encuentra en Zona Sur, con cobertura de entrega directa en Avellaneda, Lanús, Lomas de Zamora, Quilmes, Berazategui, Almirante Brown, Esteban Echeverría y Ezeiza. Para otras zonas, coordinamos envíos especiales."
+    answer: "Nuestra base operativa se concentra principalmente en Zona Sur, pero realizamos envíos y entregas a todo el país para asegurar que accedas a nuestros productos vivas donde vivas."
   },
   {
     question: "¿Existe una compra mínima para despachos a domicilio?",
